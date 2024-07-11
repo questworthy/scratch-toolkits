@@ -50,7 +50,7 @@
 		{#if $appState.leftButtonLink != ''}
 			<a href={$appState.leftButtonLink}>
 				<button
-					class="absolute bottom-0 left-0 m-4 px-4 py-2 rounded-xl bg-black text-xl text-white shadow-md hover:bg-sky-200 hover:text-sky-900 transition-colors duration-200"
+					class="fixed bottom-0 left-0 m-4 px-4 py-2 rounded-xl bg-black text-xl text-white shadow-md hover:bg-sky-200 hover:text-sky-900 transition-colors duration-200"
 					>{$appState.leftButtonLabel}</button
 				>
 			</a>
@@ -58,7 +58,7 @@
 		{#if $appState.rightButtonLink != ''}
 			<a href={$appState.rightButtonLink}>
 				<button
-					class="absolute bottom-0 right-0 m-4 px-4 py-2 rounded-xl bg-black text-xl text-white shadow-md hover:bg-green-200 hover:text-green-900 transition-colors duration-200"
+					class="fixed bottom-0 right-0 m-4 px-4 py-2 rounded-xl bg-black text-xl text-white shadow-md hover:bg-green-200 hover:text-green-900 transition-colors duration-200"
 					>{$appState.rightButtonLabel}</button
 				>
 			</a>
