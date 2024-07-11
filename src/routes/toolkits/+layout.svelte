@@ -9,22 +9,28 @@
 		width = screen.width;
 		height = screen.height;
 	});
+
+	import { appState } from '$lib/stores';
+
+	$: leftButtonLabel = $appState.links;
+	$: rightButtonLabel = $appState.links;
 </script>
 
 <div class="w-screen h-screen flex">
 	{#if width >= 1024 && width > height}
 		<div class="w-64 border-r shadow flex flex-col p-2">
 			<div class="m-2">
-				<Lily />
+				<Lily smile={$appState.smile} />
 			</div>
 			<p class="m-2 flex-grow border-b">
-				Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.
+				{$appState.dialogue}
 			</p>
 			<div class="m-2 border-b">
-				<p>Insert resource description here. This should ideally be a one-liner.</p>
+				<p>{$appState.resources}</p>
 				<ul class="my-4 list-disc list-inside">
-					<li>asd</li>
-					<li>asd</li>
+					{#each $appState.links as link}
+						<li><a href={link.url}>{link.label}</a></li>
+					{/each}
 				</ul>
 			</div>
 			<footer class="m-2">
@@ -39,6 +45,9 @@
 	{/if}
 	<div class="flex-grow flex flex-col">
 		<Nav />
+		<h1 class="text-center my-8 md:m-16 text-4xl">
+			{$appState.title}
+		</h1>
 		<slot />
 	</div>
 </div>
