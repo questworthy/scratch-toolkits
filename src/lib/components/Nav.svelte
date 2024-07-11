@@ -2,7 +2,9 @@
 	const links = ['home', 'toolkits', 'about'];
 </script>
 
-<nav class="p-4 flex md:flex-row flex-col justify-between items-start shadow">
+<nav
+	class="p-2 flex md:flex-row flex-col justify-between items-start md:items-center shadow bg-white"
+>
 	<a href="/" class="flex items-center h-16">
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
