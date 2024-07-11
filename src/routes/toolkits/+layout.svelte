@@ -11,6 +11,7 @@
 	});
 
 	import { appState } from '$lib/stores';
+	import SvelteMarkdown from 'svelte-markdown';
 </script>
 
 <div class="w-screen h-screen flex">
@@ -19,9 +20,9 @@
 			<div class="m-2">
 				<Lily expression={$appState.expression} />
 			</div>
-			<p class="m-2 flex-grow border-b">
-				{$appState.dialogue}
-			</p>
+			<div class="m-2 flex-grow border-b">
+				<SvelteMarkdown source={$appState.dialogue} />
+			</div>
 			<div class="m-2 border-b">
 				<p>{$appState.resource}</p>
 				<ul class="my-4 list-disc list-inside">

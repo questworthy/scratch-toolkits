@@ -15,7 +15,7 @@
 		$appState.dialogue =
 			'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.';
 		$appState.leftButtonLink = '/toolkits';
-		$appState.rightButtonLink = '/gender/level-1/step-1';
+		$appState.rightButtonLink = '/toolkits/gender-equity/level-1/step-1';
 		$appState.dialogue = levels[latestSelected - 1];
 	});
 	$: latestSelected = $appState.lastLevel;
