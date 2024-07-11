@@ -1,5 +1,16 @@
 <script>
 	import { appState } from '$lib/stores';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		$appState.expression = 'blank';
+		$appState.dialogue =
+			'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.';
+		$appState.title = 'Choose Your Adventure !';
+		$appState.leftButtonLink = '/';
+		$appState.rightButtonLink = '';
+	});
+
 	const toolkits = [
 		{
 			label: 'Gender Equity',
@@ -10,7 +21,7 @@
 		},
 		{
 			label: 'Scratch Basics',
-			url: '/toolkits/scratch-basics',
+			url: 'http://172.105.48.200:8001/code_game_explore.html',
 			color: '#E7F0DC',
 			src: 'scratch-basics-toolkit.png',
 			alt: 'Scratch Basics Toolkit Option'

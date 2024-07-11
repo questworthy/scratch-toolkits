@@ -1,11 +1,10 @@
 import { writable } from 'svelte/store';
 
 export const appState = writable({
-	title: 'Insert Page Title Here.',
-	smile: false,
-	dialogue:
-		'Insert dialogue here. This should ideally be 25-30 words. As the dialogues change this text will reanimate to reflect changes.',
-	resources: 'Insert resource description here. This should ideally be a one-liner.',
+	// side panel
+	expression: 'blank', // smile, surprised etc.
+	dialogue: 'Insert dialogue here ~ 25-30 words. This text will reanimate to reflect changes.',
+	resource: 'Insert resource description here. This should ideally be a one-liner.',
 	links: [
 		{
 			label: '🧮 What is Scratch?',
@@ -13,8 +12,10 @@ export const appState = writable({
 		},
 		{ label: '🪄 Made with Scratch?', url: 'https://www.youtube.com/watch?v=98awWpkx9UM' }
 	],
-	back: '',
-	next: '',
+	title: 'Insert Page Title Here.',
 	leftButtonLabel: 'Back',
-	rightButtonLabel: 'Next'
+	leftButtonLink: '',
+	rightButtonLabel: 'Next',
+	rightButtonLink: '',
+	lastLevel: 1
 });

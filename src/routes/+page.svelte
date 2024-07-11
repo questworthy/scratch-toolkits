@@ -1,23 +1,28 @@
 <script>
 	import Lily from '$lib/components/Lily.svelte';
 	import Nav from '$lib/components/Nav.svelte';
-	let smile = false;
+	import { appState } from '$lib/stores';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		$appState.expression = 'blank';
+	});
 </script>
 
 <Nav />
 <div class="m-2 flex flex-col md:flex-row-reverse justify-center items-center md:translate-y-1/2">
 	<div class="p-4">
-		<Lily {smile} />
+		<Lily expression={$appState.expression} />
 	</div>
 	<div class="p-4 max-w-sm">
 		<h2 class="text-4xl font-bold">Unleash your creativity with scratch !</h2>
 		<a
 			href="/toolkits"
 			on:mouseenter={() => {
-				smile = true;
+				$appState.expression = 'smile';
 			}}
 			on:mouseleave={() => {
-				smile = false;
+				$appState.expression = 'blank';
 			}}
 		>
 			<button class="my-4 p-4 rounded-xl border">Get Started</button>

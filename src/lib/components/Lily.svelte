@@ -17,7 +17,7 @@
 	$: X = mapNumRange(cursor.x, innerWidth, 0, 20, -20);
 	$: Y = mapNumRange(cursor.y, innerWidth, 0, 20, -20);
 
-	export let smile = false;
+	export let expression = 'blank'; // or smile
 </script>
 
 <svelte:window
@@ -145,7 +145,7 @@
 	/><g
 		id="g3-5"
 		transform="rotate(15.675185,1485.7125,1774.1954)"
-		style="display:{smile ? 'block' : 'none'}"
+		style="display:{expression == 'smile' ? 'block' : 'none'}"
 		><g id="g2-4" transform="rotate(-10.420288,578.64438,919.40088)"
 			><path
 				d="m 482.35178,1042.7722 c 12.07271,-13.4525 32.24423,-21.7805 53.73606,-22.1853 20.60183,-0.3163 39.80893,6.6921 51.63522,18.8483 147.58309,-109.23297 -236.10703,-82.075 -105.37128,3.337 z"
