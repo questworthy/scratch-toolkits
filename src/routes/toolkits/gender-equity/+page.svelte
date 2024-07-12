@@ -12,8 +12,7 @@
 
 	onMount(() => {
 		$appState.expression = 'blank';
-		$appState.dialogue =
-			'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.';
+		$appState.title = '⚡ Level Up !';
 		$appState.leftButtonLink = '/toolkits';
 		$appState.rightButtonLink = '/toolkits/gender-equity/level-1/step-1';
 		$appState.dialogue = levels[latestSelected - 1];
@@ -34,9 +33,9 @@
 					$appState.rightButtonLink = '/toolkits/gender-equity/level-' + (index + 1) + '/step-1';
 				}}
 				class=" {latestSelected == index + 1 &&
-					'bg-red-400'} cursor-pointer no-underline m-4 p-4 flex flex-col gap-4 border-[#F7DED0] border-4 rounded-xl bg-[#F7DED0] transition-all duration-200 text-center"
+					'border-stone-600'} cursor-pointer no-underline m-4 p-4 flex flex-col gap-4 border-[#F7DED0] border-4 rounded-xl bg-[#F7DED0] transition-all duration-200 text-center"
 			>
-				<p class="text-6xl text-darkAmber m-0">
+				<p class="text-6xl m-0">
 					{index + 1}
 				</p>
 				<div class="flex">

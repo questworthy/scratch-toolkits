@@ -28,7 +28,7 @@
 		{#each links as link}
 			<a
 				href={link === 'home' ? '/' : '/' + link}
-				class="{style} {(currentURL === '/' && link === 'home') || currentURL.slice(1) === link
+				class="{style} {(currentURL === '/' && link === 'home') || currentURL.includes(link)
 					? 'bg-[#333333] text-[#D3D3D3] shadow'
 					: 'hover:bg-[#fcfaf4] text-[#333333]'}"
 			>

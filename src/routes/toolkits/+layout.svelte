@@ -1,4 +1,7 @@
 <script>
+	import quest from '$lib/assets/logos/quest.svg';
+	import scratch from '$lib/assets/logos/scratch.svg';
+
 	import Lily from '$lib/components/Lily.svelte';
 	import Nav from '$lib/components/Nav.svelte';
 	import { onMount } from 'svelte';
@@ -17,8 +20,8 @@
 	import SvelteMarkdown from 'svelte-markdown';
 
 	const logos = [
-		{ src: 'logos/quest.svg', alt: 'Quest Alliance Logo', href: 'https://www.questalliance.net/' },
-		{ src: 'logos/scratch.svg', alt: 'Scratch Logo', href: 'https://scratch.mit.edu/' }
+		{ src: quest, alt: 'Quest Alliance Logo', href: 'https://www.questalliance.net/' },
+		{ src: scratch, alt: 'Scratch Logo', href: 'https://scratch.mit.edu/' }
 	];
 </script>
 
