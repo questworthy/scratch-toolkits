@@ -31,7 +31,7 @@
 	];
 </script>
 
-<div class="mx-auto flex flex-col md:flex-row gap-8 m-4">
+<div class="mx-auto flex flex-col justify-center items-center md:flex-row gap-8 m-4">
 	{#each toolkits as toolkit}
 		<a
 			on:mouseenter={() => {

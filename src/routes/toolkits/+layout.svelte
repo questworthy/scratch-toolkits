@@ -7,7 +7,7 @@
 	import { onMount } from 'svelte';
 
 	const NavButtonStyle =
-		'px-4 py-2 rounded-xl bg-black text-xl text-white shadow-md hover:bg-sky-200 hover:text-sky-900 transition-colors duration-200';
+		'absolute bottom-0 m-4 px-4 py-2 rounded-xl bg-black text-xl text-white shadow-md hover:bg-sky-200 hover:text-sky-900 transition-colors duration-200';
 
 	let width = 0;
 	let height = 0;
@@ -52,21 +52,22 @@
 	{/if}
 	<div class="flex-grow flex flex-col relative">
 		<Nav />
-		<h1 class="text-center font-bold my-8 md:m-16 text-4xl text-stone-400">
-			{$appState.title}
-		</h1>
-		<slot />
-		<div class="w-full p-4 absolute bottom-0 flex flex-row justify-between">
-			{#if $appState.leftButtonLink != ''}
-				<a class={NavButtonStyle} href={$appState.leftButtonLink}>
-					<button>{$appState.leftButtonLabel}</button>
-				</a>
-			{/if}
-			{#if $appState.rightButtonLink != ''}
-				<a class={NavButtonStyle} href={$appState.rightButtonLink}>
-					<button>{$appState.rightButtonLabel}</button>
-				</a>
-			{/if}
+		<div class="pb-40 grow overflow-y-scroll">
+			<h1 class="my-16 text-center font-bold text-4xl text-stone-400">
+				{$appState.title}
+			</h1>
+
+			<slot />
 		</div>
+		{#if $appState.leftButtonLink != ''}
+			<a class="left-0 {NavButtonStyle}" href={$appState.leftButtonLink}>
+				<button>{$appState.leftButtonLabel}</button>
+			</a>
+		{/if}
+		{#if $appState.rightButtonLink != ''}
+			<a class="right-0 {NavButtonStyle}" href={$appState.rightButtonLink}>
+				<button>{$appState.rightButtonLabel}</button>
+			</a>
+		{/if}
 	</div>
 </div>

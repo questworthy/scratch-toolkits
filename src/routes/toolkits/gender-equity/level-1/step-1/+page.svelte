@@ -3,8 +3,6 @@
 	import { appState } from '$lib/stores';
 	import { onMount } from 'svelte';
 
-	let online = false;
-
 	onMount(() => {
 		$appState.dialogue = 'Hi there!';
 		$appState.title = '🍿 Step 1 : Story Time !';
