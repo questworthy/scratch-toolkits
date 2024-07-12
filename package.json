@@ -38,7 +38,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@fontsource/comic-neue": "^5.0.12",
-		"svelte-markdown": "^0.4.1"
+		"@fontsource/comic-neue": "^5.0.12"
 	}
 }

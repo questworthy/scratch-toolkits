@@ -17,7 +17,6 @@
 	});
 
 	import { appState } from '$lib/stores';
-	import SvelteMarkdown from 'svelte-markdown';
 
 	const logos = [
 		{ src: quest, alt: 'Quest Alliance Logo', href: 'https://www.questalliance.net/' },
@@ -32,7 +31,7 @@
 				<Lily expression={$appState.expression} />
 			</div>
 			<div class="m-2 flex-grow border-b">
-				<SvelteMarkdown source={$appState.dialogue} />
+				<p>{$appState.dialogue}</p>
 			</div>
 			<div class="m-2 border-b">
 				<p>{$appState.resource}</p>

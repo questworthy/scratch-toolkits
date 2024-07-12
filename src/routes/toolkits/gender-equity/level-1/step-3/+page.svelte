@@ -1,7 +1,6 @@
 <script>
 	import { appState } from '$lib/stores';
 	import { onMount } from 'svelte';
-	import SvelteMarkdown from 'svelte-markdown';
 
 	onMount(() => {
 		$appState.dialogue = 'Give it a thought! 💭';
