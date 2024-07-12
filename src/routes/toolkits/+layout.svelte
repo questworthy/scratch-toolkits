@@ -45,11 +45,7 @@
 			<footer class="m-2 flex gap-2">
 				{#each logos as logo}
 					<a target="_blank" href={logo.href}>
-						<img
-							class="m-0 h-12 bg-white rounded-full border shadow"
-							src={logo.src}
-							alt={logo.alt}
-						/>
+						<img class="m-0 h-12 bg-white rounded-full border" src={logo.src} alt={logo.alt} />
 					</a>
 				{/each}
 			</footer>
