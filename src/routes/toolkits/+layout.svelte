@@ -15,6 +15,11 @@
 
 	import { appState } from '$lib/stores';
 	import SvelteMarkdown from 'svelte-markdown';
+
+	const logos = [
+		{ src: 'logos/quest.svg', alt: 'Quest Alliance Logo', href: 'https://www.questalliance.net/' },
+		{ src: 'logos/scratch.svg', alt: 'Scratch Logo', href: 'https://scratch.mit.edu/' }
+	];
 </script>
 
 <div class="w-screen h-screen flex">
@@ -34,13 +39,16 @@
 					{/each}
 				</ul>
 			</div>
-			<footer class="m-2">
-				<p>
-					Created with ❤️ by <a
-						class="underline underline-offset-4 hover:no-underline text-sky-600"
-						href="www.questalliance.net">Quest Alliance</a
-					>.
-				</p>
+			<footer class="m-2 flex gap-2">
+				{#each logos as logo}
+					<a target="_blank" href={logo.href}>
+						<img
+							class="m-0 h-12 bg-white rounded-full border shadow"
+							src={logo.src}
+							alt={logo.alt}
+						/>
+					</a>
+				{/each}
 			</footer>
 		</div>
 	{/if}
