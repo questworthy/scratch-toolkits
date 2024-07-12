@@ -6,7 +6,7 @@
 		$appState.expression = 'blank';
 		$appState.dialogue =
 			'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.';
-		$appState.title = 'Choose Your Adventure !';
+		$appState.title = '🧭 Choose Your Adventure !';
 		$appState.leftButtonLink = '/';
 		$appState.rightButtonLink = '';
 	});
@@ -16,6 +16,7 @@
 			label: 'Gender Equity',
 			url: '/toolkits/gender-equity',
 			color: '#F7E7DC',
+			text: '#1C471F',
 			src: 'gender-equity-toolkit.png',
 			alt: 'Gender Equity Toolkit Option'
 		},
@@ -23,22 +24,23 @@
 			label: 'Scratch Basics',
 			url: 'http://172.105.48.200:8001/code_game_explore.html',
 			color: '#E7F0DC',
+			text: '#5B2715',
 			src: 'scratch-basics-toolkit.png',
 			alt: 'Scratch Basics Toolkit Option'
 		}
 	];
 </script>
 
-<div class="mx-auto flex flex-col md:flex-row md:translate-y-1/2 gap-8 m-4">
+<div class="mx-auto flex flex-col md:flex-row gap-8 m-4">
 	{#each toolkits as toolkit}
 		<a
 			on:mouseenter={() => {
-				$appState.smile = true;
+				$appState.expression = 'smile';
 			}}
 			on:mouseleave={() => {
-				$appState.smile = false;
+				$appState.expression = 'blank';
 			}}
-			class="w-80 rounded-xl"
+			class="w-80 rounded-xl no-underline"
 			href={toolkit.url}
 		>
 			<img
@@ -47,7 +49,9 @@
 				src={toolkit.src}
 				alt={toolkit.alt}
 			/>
-			<p class="p-2 m-2 text-center">{toolkit.label}</p>
+			<p class="p-2 m-2 font-bold text-center text-2xl text-stone-400">
+				{toolkit.label}
+			</p>
 		</a>
 	{/each}
 </div>
