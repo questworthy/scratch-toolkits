@@ -1,28 +1,14 @@
 <script>
-	import SvelteMarkdown from 'svelte-markdown';
+	import { appState } from '$lib/stores';
 	import { onMount } from 'svelte';
 	import Mcq from '$lib/components/MCQ.svelte';
-	import { appState } from '$lib/stores';
-
-	let online = false;
-	let hidden = false;
 
 	onMount(() => {
-		online = window.navigator.onLine;
-		setTimeout(() => {
-			hidden = true;
-		}, 1000);
-
-		$appState.dialogue = 'Do you know someone around you who has broken a gender stereotype?';
-		$appState.title = 'Step 4';
-		$appState.leftButtonLink = '/toolkits/gender-equity/level-1/quiz';
-		$appState.rightButtonLink = '/toolkits/gender-equity/level-1/step-5';
+		$appState.dialogue = 'Can you get the perfect score ?';
+		$appState.title = '💯 Quiz Time !';
+		$appState.leftButtonLink = '/toolkits/gender-equity/level-1/step-3';
+		$appState.rightButtonLink = '/toolkits/gender-equity/level-1/step-4';
 	});
-
-	const intro = `
-Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
-Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
-	`;
 
 	const questions = [
 		{
@@ -89,8 +75,7 @@ Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint 
 	];
 </script>
 
-<div class="mx-auto max-w-screen-md prose font-inter m-4 p-4">
-	<SvelteMarkdown source={intro} />
+<div class="mx-auto max-w-screen-md prose font-inter m-4 p-4 prose-xl">
 	{#each questions as question}
 		<Mcq {question} />
 	{/each}

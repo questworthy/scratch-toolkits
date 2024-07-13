@@ -33,7 +33,7 @@
 					$appState.rightButtonLink = '/toolkits/gender-equity/level-' + (index + 1) + '/step-1';
 				}}
 				class=" {latestSelected == index + 1 &&
-					'border-stone-600'} cursor-pointer no-underline m-4 p-4 flex flex-col gap-4 border-[#F7DED0] border-4 rounded-xl bg-[#F7DED0] transition-all duration-200 text-center"
+					'border-stone-600'} cursor-pointer no-underline m-4 p-4 flex flex-col gap-4 border-[#F7DED0] border-4 rounded-xl bg-[#F7DED0] transition-all duration-200 text-center hover:-translate-y-8"
 			>
 				<p class="text-6xl m-0">
 					{index + 1}
