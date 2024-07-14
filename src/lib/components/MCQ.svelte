@@ -71,7 +71,11 @@
 				{#if selected.value === question.correct}
 					✅ Correct.
 				{:else}
-					❌ Incorrect.{/if}
+					❌ Incorrect.
+					{#if selected == -1}
+						No options were selected.
+					{/if}
+				{/if}
 			</p>
 		{/if}
 	</div>
