@@ -1,16 +1,16 @@
 <script>
 	import { appState } from '$lib/stores';
 	import { onMount } from 'svelte';
-	import video from '$lib/assets/videos/sujatha.mp4';
-	import caption from '$lib/assets/videos/sujatha.vtt';
+	import video from '$lib/assets/videos/padman.mp4';
+	import caption from '$lib/assets/videos/padman.vtt';
 
 	let online = false;
 	onMount(() => {
 		online = window.navigator.onLine;
 		$appState.dialogue = 'Do you know someone around you who has broken a gender stereotype?';
 		$appState.title = '✨ Step 4 : Get Inspired !';
-		$appState.leftButtonLink = '/toolkits/gender-equity/level-1/quiz';
-		$appState.rightButtonLink = '/toolkits/gender-equity/level-1/step-5';
+		$appState.leftButtonLink = '/toolkits/gender-equity/level-2/quiz';
+		$appState.rightButtonLink = '/toolkits/gender-equity/level-2/step-5';
 	});
 </script>
 
@@ -19,7 +19,7 @@
 		<iframe
 			width="560"
 			height="315"
-			src="https://www.youtube.com/embed/--LI0ZRsglg?si=q7IEMfL6e--_pr2D"
+			src="https://www.youtube.com/embed/8pnp-mu_800?si=bti68v5Ud2qx85MX"
 			title="YouTube video player"
 			frameborder="0"
 			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -32,8 +32,12 @@
 			<track label="English" kind="captions" srclang="en" src={caption} default />
 		</video>
 	{/if}
+
 	<p>
-		Here is a video about a woman who challenged some stereotypes and rose above them. Meet Ms.
-		Sujata Ramdorai in the video ‘Sujata Ramdorai and her tale of numbers!’ 🚀
+		As we celebrate women breaking stereotypes, let us now look at a man who fought against all odds
+		for the betterment of women’s lives. Watch the inspiring journeys and words of advice from of a
+		man who has changed menstrual hygiene for women the ‘Padman’ Arunachalam Muruganantham. With
+		much effort and shattering of stereotypes, he made low-cost sanitary napkins for women in rural
+		areas.
 	</p>
 </div>

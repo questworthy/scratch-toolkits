@@ -10,11 +10,15 @@
 			{ src: '', label: 'thirty', value: 3, nudge: 'nudge 3' }
 		],
 		correct: 2,
-		color: '#DBA979'
+		color: '#DBA979',
+		details: ''
 	};
 
 	let showAnswer = false;
-	let selected = -1;
+	let selected = -1; // 0 means all answers are correct
+
+	export let correctDialogue = 'correct answer dialogue';
+	export let incorrectDialogue = 'incorrect answer dialogue';
 </script>
 
 <div class="my-16">
@@ -81,6 +85,9 @@
 				disabled={showAnswer}
 				on:click|once={() => {
 					showAnswer = true;
+
+					$appState.dialogue =
+						selected.value === question.correct ? incorrectDialogue : correctDialogue;
 				}}
 				class="p-2 my-8 rounded-xl shadow border active:translate-y-2 active:scale-95 transition-all duration-200"
 				>Check Answer</button
@@ -91,11 +98,13 @@
 			<p class="p-2 my-8">
 				Result :
 				{#if selected.value === question.correct}
-					✅ Correct.
+					✅ Correct. {question.details}
+				{:else if selected == 0}
+					🎉 Well done ! {question.details}
 				{:else}
-					❌ Incorrect.
+					❌ Incorrect. {question.details}
 					{#if selected == -1}
-						No options were selected.
+						No options were selected. {question.details}
 					{/if}
 				{/if}
 			</p>
