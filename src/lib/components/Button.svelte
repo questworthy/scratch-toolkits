@@ -2,6 +2,8 @@
 	import { appState } from '$lib/stores';
 	export let base = true;
 	export let label = 'Submit';
+	export let entryDialogue = 'entry dialogue.';
+	export let exitDialogue = 'exit dialogue';
 </script>
 
 <button
@@ -9,11 +11,10 @@
 		? 'border-[#52225E] hover:border-[#5B2715] text-[#52225E] hover:text-[#5B2715]'
 		: 'border-[#52225E] hover:border-[#1C471F] text-[#52225E] hover:text-[#1C471F]'} mx-2 my-4 px-4 py-2 relative border-2 group rounded-2xl"
 	on:mouseenter={() => {
-		$appState.dialogue =
-			'Go on and click the button to explore the scratch project or check out what Scratch is.';
+		$appState.dialogue = entryDialogue;
 	}}
 	on:mouseleave={() => {
-		$appState.dialogue = 'What are you waiting for ...';
+		$appState.dialogue = exitDialogue;
 	}}
 >
 	<div

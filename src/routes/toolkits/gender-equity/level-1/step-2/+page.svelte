@@ -6,7 +6,7 @@
 	onMount(() => {
 		$appState.dialogue =
 			'Do you know what is a stereotype ?  Gender stereotypes can be limiting and harmful. ';
-		$appState.title = '💄 Step 2 : Think !';
+		$appState.title = '💭 Step 2 : Think !';
 		$appState.leftButtonLink = '/toolkits/gender-equity/level-1/step-1';
 		$appState.rightButtonLink = '/toolkits/gender-equity/level-1/step-3';
 	});

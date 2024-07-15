@@ -5,9 +5,9 @@
 		index: 0,
 		label: 'Question',
 		options: [
-			{ label: 'ten', value: 1, nudge: 'nudge 1' },
-			{ label: 'twenty', value: 2, nudge: 'nudge 2' },
-			{ label: 'thirty', value: 3, nudge: 'nudge 3' }
+			{ src: '', label: 'ten', value: 1, nudge: 'nudge 1' },
+			{ src: '', label: 'twenty', value: 2, nudge: 'nudge 2' },
+			{ src: '', label: 'thirty', value: 3, nudge: 'nudge 3' }
 		],
 		correct: 2,
 		color: '#DBA979'
@@ -27,28 +27,50 @@
 		<p class="m-0 p-2 text-2xl">
 			{question.label}
 		</p>
-		<div class="my-8">
+		<div class="my-8 flex">
 			{#each question.options as option, index}
-				<label
-					on:mouseenter={() => {
-						$appState.dialogue = 'Are you sure ?';
-					}}
-					class="{selected.value == index + 1
-						? 'bg-[#E7D4B5]'
-						: 'bg-[#e3e1d9]'} p-2 border-b-4 border-[#fcfaf4] cursor-pointer flex justify-start items-center hover:bg-[#D8EFD3] transition-all duration-200"
-				>
-					<input
-						disabled={showAnswer}
-						class="m-4 scale-150"
-						type="radio"
-						bind:group={selected}
-						name="amount"
-						value={option}
-					/>
-					<p class="m-0 px-4 py-2 leading-tight">
-						{option.label}
-					</p>
-				</label>
+				{#if option.src == ''}
+					<label
+						on:mouseenter={() => {
+							$appState.dialogue = 'Are you sure ?';
+						}}
+						class="{selected.value == index + 1
+							? 'bg-[#E7D4B5]'
+							: 'bg-[#e3e1d9]'} p-2 border-b-4 border-[#fcfaf4] cursor-pointer flex justify-start items-center hover:bg-[#D8EFD3] transition-all duration-200"
+					>
+						<input
+							disabled={showAnswer}
+							class="m-4 scale-150"
+							type="radio"
+							bind:group={selected}
+							name="amount"
+							value={option}
+						/>
+						<img class="m-0" src={option.src} alt={option.label} />
+						<p class="m-0 px-4 py-2 leading-tight">
+							{option.label}
+						</p>
+					</label>
+				{:else}
+					<label
+						on:mouseenter={() => {
+							$appState.dialogue = 'Are you sure ?';
+						}}
+						class="{selected.value == index + 1
+							? 'bg-[#E7D4B5]'
+							: 'bg-[#e3e1d9]'} p-2 border-b-4 border-[#fcfaf4] cursor-pointer hover:bg-[#D8EFD3] transition-all duration-200"
+					>
+						<img class="m-0 max-h-96" src={option.src} alt={option.label} />
+						<input
+							disabled={showAnswer}
+							class="m-4 scale-150"
+							type="radio"
+							bind:group={selected}
+							name="amount"
+							value={option}
+						/>
+					</label>
+				{/if}
 			{/each}
 		</div>
 	</fieldset>
