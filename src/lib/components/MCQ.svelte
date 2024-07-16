@@ -31,7 +31,7 @@
 		<p class="m-0 p-2 text-2xl">
 			{question.label}
 		</p>
-		<div class="my-8 flex">
+		<div class="my-8 flx">
 			{#each question.options as option, index}
 				{#if option.src == ''}
 					<label
@@ -50,7 +50,6 @@
 							name="amount"
 							value={option}
 						/>
-						<img class="m-0" src={option.src} alt={option.label} />
 						<p class="m-0 px-4 py-2 leading-tight">
 							{option.label}
 						</p>

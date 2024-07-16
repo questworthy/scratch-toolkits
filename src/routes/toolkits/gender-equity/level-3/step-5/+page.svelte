@@ -1,0 +1,43 @@
+<script>
+	import { onMount } from 'svelte';
+	import { appState } from '$lib/stores';
+	import Button from '$lib/components/Button.svelte';
+
+	let online = false;
+	let hidden = false;
+
+	onMount(() => {
+		online = window.navigator.onLine;
+		setTimeout(() => {
+			hidden = true;
+		}, 1000);
+
+		$appState.dialogue = 'Go ahead and try to build your own Scratch project! 🏗️';
+		$appState.title = '🎨 Step 5 : Build your own Scratch project!';
+		$appState.leftButtonLink = '/toolkits/gender-equity/level-3/step-4';
+		$appState.rightButtonLink = '/toolkits/gender-equity/level-4/step-1';
+	});
+</script>
+
+<div class="mx-auto max-w-screen-md prose m-4 p-4 prose-xl">
+	<p>
+		‘Gender’ is a very sensitive issue where normally people believe it is too personal and there
+		isn’t much to discuss. But it is important to discuss and debate issues related to gender to
+		create awareness of gender stereotypes and begin the process of breaking some of these
+		stereotypes.
+	</p>
+
+	<p>
+		As a young individual, you can stimulate awareness around these concepts by bringing them alive
+		through Scratch. Scratch promotes computational thinking and problem solving skills; creative
+		teaching and learning; self-expression and collaboration; and equity in computing.
+	</p>
+
+	<p>
+		Think of technology as a problem solver for these deep rooted social issues around you and bring
+		a wave of change! 🧑‍💻🌊
+	</p>
+
+	<Button label="Create your own scratch project" />
+	<Button base={false} label="Remix the project earlier used in this level" />
+</div>
