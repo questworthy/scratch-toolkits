@@ -8,6 +8,7 @@
 		$appState.title = '🍿 Step 1 : Story Time !';
 		$appState.leftButtonLink = '/toolkits/gender-equity';
 		$appState.rightButtonLink = '/toolkits/gender-equity/level-5/step-2';
+		$appState.rightButtonLabel = 'Next';
 	});
 </script>
 

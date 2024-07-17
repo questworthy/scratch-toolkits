@@ -6,6 +6,7 @@
 	onMount(() => {
 		$appState.dialogue = 'Welcome to Level 4 of this toolkit! ✨';
 		$appState.title = '🍿 Step 1 : Story Time !';
+		$appState.rightButtonLabel = 'Next';
 		$appState.leftButtonLink = '/toolkits/gender-equity';
 		$appState.rightButtonLink = '/toolkits/gender-equity/level-4/step-2';
 	});
@@ -18,6 +19,8 @@
 		gender, but did you know that there is more to gender identity than being male or female? People
 		can identify themselves in different ways.
 	</p>
+
+	<img src="/genderbread.png" alt="" />
 	<p>
 		Gender identity is about how individuals see themselves and what they call themselves. It can be
 		the same or different from the sex they were given at birth.
@@ -28,8 +31,6 @@
 	</p>
 
 	<p>While sexual identity and gender identity are separate, they can influence each other.</p>
-
-	<img src="/genderbread.png" alt="" />
 
 	<p>
 		In this level, the Scratch game will help you build an understanding around these concepts. Play

@@ -3,18 +3,18 @@
 	import { onMount } from 'svelte';
 
 	const levels = [
-		`level 1 : Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.`,
-		`level 2 : Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.`,
-		`level 3 : Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.`,
-		`level 4 : Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.`,
-		`level 5 : Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.`
+		'Level 1 : Gender Stereotypes & Roles - I',
+		'Level 2 : Gender Stereotypes & Roles - II',
+		'Level 3 : Explore the Concepts of Sex and Gender',
+		'Level 4 : Understand sexuality & gender identities',
+		'Level 5 : What can we do ?'
 	];
 
 	onMount(() => {
 		$appState.expression = 'blank';
 		$appState.title = '⚡ Level Up !';
 		$appState.leftButtonLink = '/toolkits';
-		$appState.rightButtonLink = '/toolkits/gender-equity/level-1/step-1';
+		$appState.rightButtonLink = '';
 		$appState.dialogue = levels[latestSelected - 1];
 	});
 	$: latestSelected = $appState.lastLevel;
@@ -22,7 +22,7 @@
 
 <div class="flex flex-wrap justify-center items-center">
 	{#each levels as level, index}
-		<div>
+		<a class="no-underline" href={'/toolkits/gender-equity/level-' + (index + 1) + '/step-1'}>
 			<div
 				role="presentation"
 				on:click={() => {
@@ -30,10 +30,8 @@
 					$appState.lastLevel = latestSelected;
 					$appState.expression = 'blank';
 					$appState.dialogue = level;
-					$appState.rightButtonLink = '/toolkits/gender-equity/level-' + (index + 1) + '/step-1';
 				}}
-				class=" {latestSelected == index + 1 &&
-					'border-stone-600'} cursor-pointer no-underline m-4 p-4 flex flex-col gap-4 border-[#F7DED0] border-4 rounded-xl bg-[#F7DED0] transition-all duration-200 text-center hover:-translate-y-8"
+				class="hover:border-stone-600 cursor-pointer no-underline m-4 p-4 flex flex-col gap-4 border-[#F7DED0] border-4 rounded-xl bg-[#F7DED0] transition-all duration-200 text-center hover:scale-110"
 			>
 				<p class="text-6xl m-0">
 					{index + 1}
@@ -86,6 +84,6 @@
 					>
 				</div>
 			</div>
-		</div>
+		</a>
 	{/each}
 </div>

@@ -34,6 +34,6 @@
 	{/if}
 	<p>
 		Here is a video about a woman who challenged some stereotypes and rose above them. Meet Ms.
-		Sujata Ramdorai in the video ‘Sujata Ramdorai and her tale of numbers!’ 🚀
+		Sujata Ramdorai in the video ‘Sujata Ramdorai and her story with numbers!’ 🚀
 	</p>
 </div>

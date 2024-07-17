@@ -6,6 +6,7 @@
 	onMount(() => {
 		$appState.dialogue = 'Hello learners! ✨';
 		$appState.title = '🍿 Step 1 : Story Time !';
+		$appState.rightButtonLabel = 'Next';
 		$appState.leftButtonLink = '/toolkits/gender-equity';
 		$appState.rightButtonLink = '/toolkits/gender-equity/level-3/step-2';
 	});

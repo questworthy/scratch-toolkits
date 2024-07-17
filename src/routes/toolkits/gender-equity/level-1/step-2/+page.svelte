@@ -30,9 +30,9 @@
 
 	<img class="m-0 shadow rounded-xl max-h-60 mx-auto" src={l1s2} alt="" />
 	<p>
-		The most common stereotype that affects us most often is the **gender stereotype**. Gender
-		stereotypes are biased ideas by which males and females are randomly assigned characteristics
-		and roles determined and limited by their gender.
+		The most common stereotype that affects us most often is the <strong>gender stereotypes</strong
+		>. Gender stereotypes are unfair ideas that assign certain characteristics and roles based on
+		whether someone is male or female.
 	</p>
 	<p>But, remember ...</p>
 	<p>IT IS IMPORTANT TO EDUCATE OURSELVES ABOUT THESE BELIEFS BECAUSE WE MAKE THE SOCIETY.</p>

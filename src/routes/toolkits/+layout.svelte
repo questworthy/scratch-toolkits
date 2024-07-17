@@ -7,7 +7,7 @@
 	import { onMount } from 'svelte';
 
 	const NavButtonStyle =
-		'absolute bottom-0 m-4 px-4 py-2 rounded-xl bg-black text-xl text-white shadow-md hover:bg-sky-200 hover:text-sky-900 transition-colors duration-200';
+		'absolute bottom-0 m-4 px-4 py-2 rounded-xl bg-black text-2xl text-white shadow-md hover:bg-sky-200 hover:text-sky-900 transition-colors duration-200';
 
 	let width = 0;
 	let height = 0;
@@ -37,7 +37,7 @@
 				<p>{$appState.resource}</p>
 				<ul class="my-4 list-disc list-inside">
 					{#each $appState.links as link}
-						<li><a href={link.url}>{link.label}</a></li>
+						<li><a class="underline-offset-4" target="_blank" href={link.url}>{link.label}</a></li>
 					{/each}
 				</ul>
 			</div>

@@ -30,7 +30,8 @@
 				{ label: 'A law about gender equality', value: 4, nudge: 'nudge 4' }
 			],
 			correct: 2,
-			color: '#DBA979'
+			color: '#DBA979',
+			details: 'You are close. But there is a difference between equality and equity. '
 		},
 		{
 			index: 2,

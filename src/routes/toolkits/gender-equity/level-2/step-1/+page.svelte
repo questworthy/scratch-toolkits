@@ -4,10 +4,10 @@
 	import { onMount } from 'svelte';
 
 	onMount(() => {
-		$appState.dialogue =
-			'Gender stereotypes are common rules which can be right or wrong  about what men and women are like and how they should behave.';
+		$appState.dialogue = '😎 Welcome to level 2 !';
 		$appState.title = '🍿 Step 1 : Story Time !';
 		$appState.leftButtonLink = '/toolkits/gender-equity';
+		$appState.rightButtonLabel = 'Next';
 		$appState.rightButtonLink = '/toolkits/gender-equity/level-2/step-2';
 	});
 </script>

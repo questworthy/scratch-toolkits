@@ -16,6 +16,7 @@
 		$appState.title = '🎨 Step 5 : Build your own Scratch project!';
 		$appState.leftButtonLink = '/toolkits/gender-equity/level-3/step-4';
 		$appState.rightButtonLink = '/toolkits/gender-equity/level-4/step-1';
+		$appState.rightButtonLabel = 'Level 4';
 	});
 </script>
 

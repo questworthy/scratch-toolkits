@@ -17,7 +17,19 @@
 		Are you excited to take the first step in your journey towards learning about gender, equity,
 		and access? Let us first look at a story (built entirely using the Scratch software).
 	</p>
-	<p>Please download the scratch story <b>A Day in Rani's Life</b> from below :</p>
-	<Button label="Open" />
-	<Button base={false} label="Download" />
+	<p>
+		Please download the scratch story <b>"A Day in Rani's Life"</b> from below and open it in the scratch
+		app.
+	</p>
+	<Button
+		label="Open"
+		entryDialogue="Go on and click the button to explore the scratch project or check out what Scratch is."
+		exitDialogue="What are you waiting for ..."
+	/>
+	<Button
+		base={false}
+		entryDialogue="Go on and click the button to explore the scratch project or check out what Scratch is."
+		exitDialogue="What are you waiting for ..."
+		label="Download"
+	/>
 </div>
