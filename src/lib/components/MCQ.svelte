@@ -31,25 +31,26 @@
 		<p class="m-0 p-2 text-2xl">
 			{question.label}
 		</p>
-		<div class="my-8 flx">
+		<div class="my-8 flex flex-row">
 			{#each question.options as option, index}
 				{#if option.src == ''}
+					<input
+						disabled={showAnswer}
+						class="m-4 scale-150"
+						type="radio"
+						bind:group={selected}
+						name="amount"
+						value={option}
+					/>
+
 					<label
 						on:mouseenter={() => {
 							$appState.dialogue = 'Are you sure ?';
 						}}
 						class="{selected.value == index + 1
 							? 'bg-[#E7D4B5]'
-							: 'bg-[#e3e1d9]'} p-2 border-b-4 border-[#fcfaf4] cursor-pointer flex justify-start items-center hover:bg-[#D8EFD3] transition-all duration-200"
+							: 'bg-[#e3e1d9]'} p-2 border-b-4 border-[#fcfaf4] cursor-pointer flex flex-row justify-start items-center hover:bg-[#D8EFD3] transition-all duration-200"
 					>
-						<input
-							disabled={showAnswer}
-							class="m-4 scale-150"
-							type="radio"
-							bind:group={selected}
-							name="amount"
-							value={option}
-						/>
 						<p class="m-0 px-4 py-2 leading-tight">
 							{option.label}
 						</p>

@@ -121,24 +121,8 @@
 			style="fill:none;fill-opacity:1;stroke:#696969;stroke-width:8.1181;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
 			d="m -617.16449,-43.527298 c 23.0295,-13.815 48.2046,-23.01271 85.8854,-5.29772"
 			id="path114-8-4-1-0"
-		/><ellipse
-			style="opacity:1;fill:#f9a474;fill-opacity:1;stroke:none;stroke-width:20.2953;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
-			id="path147-2-9-6"
-			cx="-1049.566"
-			cy="130.92717"
-			transform="rotate(-2.6366417)"
-			rx="27.923681"
-			ry="28.530323"
-		/><ellipse
-			style="fill:#f9a474;fill-opacity:1;stroke:none;stroke-width:20.2953;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
-			id="path147-1-9-6-1"
-			cx="-416.2229"
-			cy="145.69542"
-			transform="rotate(-2.6366417)"
-			rx="27.923681"
-			ry="28.530323"
-		/></g
-	><path
+		/>
+	</g><path
 		style="fill:#efceb9;fill-opacity:1;stroke:none;stroke-width:19.709;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
 		d="m 656.0487,964.9227 c 66.7179,28.4683 131.819,51.417 252.4398,11.7273 l -3.1924,69.934 c -72.265,11.2481 -120.5321,45.3482 -252.3179,-14.3964 z"
 		id="path115-6-2-5"
