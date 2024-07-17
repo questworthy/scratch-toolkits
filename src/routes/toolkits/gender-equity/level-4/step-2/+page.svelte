@@ -11,29 +11,22 @@
 </script>
 
 <div class="max-w-screen-sm mx-auto prose-xl">
-	<p>The Scratch game in the previous step educated you about:</p>
-
 	<ol>
 		<li>
-			Gender identities- Agender, androgyne, bigender, cisgender, transgender and more (here is a
-			list of all the recognised gender identities: List of gender identities - Wikipedia)
+			Gender identities- There are multiple gender identities recognised in the world, for ex :
+			Agender, androgyne, bigender, cisgender, transgender and more (here is a list of all the
+			recognised gender identities: List of gender identities - Wikipedia)
 		</li>
 		<li>
-			Sexual identities: Straight or heterosexual, gay/lesbian or homosexual, bisexual, pansexual or
-			queer, asexual, or curious about own sexual orientation. Click on this link to learn about the
-			sexual identities that the popular information website, Wikipedia, recognises: Sexual identity
-			- Wikipedia
+			Sexual identities are about who we are attracted to romantically or who we might have crushes
+			on. Some people might like boys, some might like girls, and some might like both boys and
+			girls. Some people might not feel attraction to anyone, and that's okay too. For ex :
+			heterosexual, homosexual, bisexual et cetera.
 		</li>
 	</ol>
-
 	<p>
 		As you grow up, you might start thinking more about who you are and who you’re attracted to.
 		This is a part of understanding your identity.
-	</p>
-
-	<p>
-		Everyone is unique! Each one of us is unique even if we may have different gender or sexual
-		identities. That doesnt make us a wrong/bad person.
 	</p>
 
 	<p>

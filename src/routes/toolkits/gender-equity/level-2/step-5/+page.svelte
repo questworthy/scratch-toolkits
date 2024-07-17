@@ -21,20 +21,17 @@
 </script>
 
 <div class="mx-auto max-w-screen-md prose m-4 p-4 prose-xl">
-	<p>It is our responsibility to identify these stereotypes and break them What can you do?</p>
+	<p>It is our responsibility to identify these stereotypes and break them :</p>
 	<ol>
 		<li>
-			<strong>Learn and Unlearn</strong> : Be aware of stereotypes. Question them. Remember, anyone can
-			be anything!
+			<strong>Learn and Unlearn</strong> : Be aware of stereotypes & question them.
 		</li>
 		<li>
-			<strong> Support Each Other </strong> : Encourage everyone to pursue their passions. Let’s create
-			workplaces where talent matters more than old ideas.
+			<strong> Support Each Other </strong> : Encourage everyone to pursue their passions.
 		</li>
 		<li>
-			<strong> Use technology as a tool </strong> : You can create Scratch projects and share your experience
-			of facing gender stereotypes or represent the changes you want to see around you to raise awareness
-			through Scratch!
+			<strong> Use technology as a tool </strong> : Build scratch projects to share your experiences
+			or show the changes you hope to see.
 		</li>
 	</ol>
 

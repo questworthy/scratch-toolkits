@@ -13,10 +13,7 @@
 </script>
 
 <div class="max-w-screen-sm mx-auto prose-xl">
-	<p>
-		Hola learners! Welcome back to this unique journey of exploring concepts around gender equity
-		through the fun interface of Scratch software.
-	</p>
+	<p>Hello learners! Welcome back to exploring gender equity concepts with Scratch !</p>
 	<p>
 		In Level 1 and Level 2 of this toolkit, you learned the impact of gender stereotypes at school,
 		at your home, and you even saw how these stereotypes continue to play a strong role throughout

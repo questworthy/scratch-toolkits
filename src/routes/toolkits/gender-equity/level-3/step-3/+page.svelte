@@ -11,7 +11,7 @@
 	});
 
 	const posts = [
-		'Did you know Egyptian men and women used makeup (kohl / kajal)? Wealthy Egyptians wore jewelry and heavily perfumed wigs regardless of gender. Even Indian kings used to wear ornaments and heavily embroidered knee-length kurtas. How does this contrast with traditional gender role expectations held by many in our current society?',
+		'Egyptian men and women used makeup (kohl / kajal)? Wealthy Egyptians wore jewelry and heavily perfumed wigs regardless of gender. Even Indian kings used to wear ornaments and heavily embroidered knee-length kurtas. How does this contrast with traditional gender role expectations held by many in our current society?',
 		'Hanfu is the traditional clothing worn by the Han Chinese that emerged during Shang dynasty; the clothing was unisex. Both females and males could both be seen wearing a similar version of the hanfu called shenyi, a long robe with connecting top and bottom parts. How does this compare or contrast with typical clothing worn today in China or the United States?'
 	];
 </script>

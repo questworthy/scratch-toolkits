@@ -35,14 +35,8 @@
 		</li>
 	</ul>
 
-	<p>This concept applies to almost every sphere of life and not just around gender.</p>
-
 	<p>
-		‘Gender equity’ is the process of being fair to all human beings irrespective of their gender
-		identities and sexualities. To achieve fairness, strategies and measures are needed to make up
-		for women’s historical and social disadvantages that prevent women and men from otherwise
-		operating on an equal level.
+		This concept applies to almost every sphere of life and not just around gender. Gender equity
+		leads to actual gender equality!
 	</p>
-
-	<p>Gender equity leads to actual gender equality!</p>
 </div>

@@ -91,7 +91,7 @@
 					nudge: 'nudge 4'
 				}
 			],
-			correct: 0,
+			correct: 3,
 			color: '#DBA979',
 			details: ''
 		}

@@ -19,7 +19,7 @@
 </script>
 
 <div class="max-w-screen-sm mx-auto prose-xl">
-	<p>Think ...</p>
+	<p>Read the questions and share your opinions with your friends.</p>
 
 	{#each posts as post}
 		<PostIt {post} />

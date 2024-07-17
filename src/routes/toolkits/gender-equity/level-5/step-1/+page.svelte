@@ -13,20 +13,15 @@
 </script>
 
 <div class="max-w-screen-sm mx-auto prose-xl">
+	<p>Welcome to the final level of the gender equity toolkit. 🥁🥁🥁</p>
 	<p>
-		Welcome to the final level of the gender equity toolkit. 🥁🥁🥁 Note: It is recommended that you
-		go through this level after going through the first four levels.
+		Note: It is recommended that you go through this level after going through the first four
+		levels.
 	</p>
 
 	<p>
 		Gender stereotypes, sexual identities, gender identities, gender roles- there are so many
 		concepts and seemingly complicated terms! 😅
-	</p>
-
-	<p>
-		Wisdom is the right use of knowledge. To know is not to be wise. Many men know a great deal, and
-		are all the greater fools for it. There is no fool so great a fool as a knowing fool. But to
-		know how to use knowledge is to have wisdom. - Charles Spurgeon
 	</p>
 
 	<p>

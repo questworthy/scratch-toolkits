@@ -100,7 +100,7 @@
 				{#if selected.value === question.correct}
 					✅ Correct. {question.details}
 				{:else if selected == 0}
-					🎉 Well done ! {question.details}
+					🎉 Hmm.. Interesting ! {question.details}
 				{:else}
 					❌ Incorrect. {question.details}
 					{#if selected == -1}

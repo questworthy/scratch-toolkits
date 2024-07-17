@@ -38,11 +38,6 @@
 	{/each}
 
 	<p>
-		You’re made up of many parts, like your interests, talents, and values. Embracing who you are
-		and respecting others for who they are makes the world a kinder and more accepting place.
-	</p>
-
-	<p>
 		Think of a situation that you may have faced or observed around you on this topic. Think of ways
 		in which you can represent it using Scratch so that other people in similar situations may find
 		it helpful. You can also use Scratch to build projects to raise awareness around this topic.

@@ -19,13 +19,13 @@
 
 	<ol>
 		<li>
-			<strong>Gender</strong>: Gender is about how you feel inside (identity), how you show yourself
-			to others (social gender), and how your body looks (body). Gender is thus the socio-cultural
-			definition of a girl/ boy, man/ woman given by the society.
+			<strong>Sex</strong> : When a baby is born, doctors usually say whether they are a boy, girl or
+			the third gender based on how their private parts look like.
 		</li>
+
 		<li>
-			<strong>Sex</strong> : When a baby is born, doctors usually say they are a boy or a girl based
-			on how their body looks.
+			<strong>Gender</strong>: Gender is about how you feel inside, how you act with others, and how
+			your body looks. It's what society says makes you a girl, boy, man, or woman.
 		</li>
 	</ol>
 

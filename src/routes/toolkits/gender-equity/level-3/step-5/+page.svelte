@@ -23,21 +23,16 @@
 <div class="mx-auto max-w-screen-md prose m-4 p-4 prose-xl">
 	<p>
 		‘Gender’ is a very sensitive issue where normally people believe it is too personal and there
-		isn’t much to discuss. But it is important to discuss and debate issues related to gender to
-		create awareness of gender stereotypes and begin the process of breaking some of these
-		stereotypes.
+		isn’t much to discuss. It's important to talk about gender issues to raise awareness about
+		stereotypes and start breaking them down.
 	</p>
 
 	<p>
-		As a young individual, you can stimulate awareness around these concepts by bringing them alive
-		through Scratch. Scratch promotes computational thinking and problem solving skills; creative
-		teaching and learning; self-expression and collaboration; and equity in computing.
+		As a young person, you can raise awareness by using Scratch. Scratch helps develop thinking and
+		problem-solving skills, encourages creativity and collaboration.
 	</p>
 
-	<p>
-		Think of technology as a problem solver for these deep rooted social issues around you and bring
-		a wave of change! 🧑‍💻🌊
-	</p>
+	<p>Think of technology as a problem solver around you & bring a wave of change! 🌊</p>
 
 	<Button label="Create your own scratch project" />
 	<Button base={false} label="Remix the project earlier used in this level" />
