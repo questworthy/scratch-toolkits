@@ -21,12 +21,30 @@
 	export let incorrectDialogue = 'incorrect answer dialogue';
 </script>
 
-<div class="my-16">
-	<div class="flex justify-center items-center">
+<div class="bg-red-200">
+	<div class="flex items-center">
 		<span class="m-2 p-2 text-4xl font-contrail">{question.index}</span>
 		<div class="h-2 w-full bg-ed-400" style="background-color:{question.color};"></div>
 	</div>
 
+	<p class="p-2 m-4">
+		{question.label}
+	</p>
+
+	{#each question.options as option, index}
+		<div>
+			<input id="option" type="radio" bind:group={selected} name="drone" value="huey" checked />
+			<label for="option">
+				{option.label}
+			</label>
+			{#if option.src != ''}
+				<img class="m-0 max-h-96" src={option.src} alt={option.label} />
+			{/if}
+		</div>
+	{/each}
+</div>
+
+<div class="my-16">
 	<fieldset class="m-4 flex flex-col">
 		<p class="m-0 p-2 text-2xl">
 			{question.label}
@@ -64,7 +82,6 @@
 							? 'bg-[#E7D4B5]'
 							: 'bg-[#e3e1d9]'} p-2 border-b-4 border-[#fcfaf4] cursor-pointer hover:bg-[#D8EFD3] transition-all duration-200"
 					>
-						<img class="m-0 max-h-96" src={option.src} alt={option.label} />
 						<input
 							disabled={showAnswer}
 							class="m-4 scale-150"

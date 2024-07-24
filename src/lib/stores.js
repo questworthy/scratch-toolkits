@@ -6,6 +6,7 @@ export const appState = writable({
 	dialogue: 'Insert dialogue here ~ 25-30 words. This text will reanimate to reflect changes.',
 	resource:
 		'Are you new to Scratch? Click the button below & explore the exciting world of creative coding!',
+	score: [0, 0, 0, 0, 0],
 	links: [
 		{ label: '🪄 Made with Scratch?', url: 'https://www.youtube.com/watch?v=98awWpkx9UM' },
 		{
