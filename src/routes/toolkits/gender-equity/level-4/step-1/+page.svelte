@@ -1,10 +1,12 @@
 <script>
 	import Button from '$lib/components/Button.svelte';
-	import Lily from '$lib/components/Lily.svelte';
 	import { appState } from '$lib/stores';
 	import { onMount } from 'svelte';
 
+	let online = false;
+
 	onMount(() => {
+		online = window.navigator.onLine;
 		$appState.dialogue = 'Welcome to Level 4 of this toolkit! ✨';
 		$appState.title = '🍿 Step 1 : Story Time !';
 		$appState.rightButtonLabel = 'Next';
@@ -47,10 +49,13 @@
 		In this level, the Scratch game will help you build an understanding around these concepts. Play
 		the game to learn more! 🎲
 	</p>
-	<Button
-		label="Scratch Game"
-		entryDialogue="Go on and click the button to explore the scratch game or check out what Scratch is."
-		exitDialogue="What are you thinking ?"
-	/>
-	<Button base={false} label="Download" />
+	{#if online}
+		<Button
+			label="Scratch Game"
+			entryDialogue="Go on and click the button to explore the scratch game or check out what Scratch is."
+			exitDialogue="What are you thinking ?"
+		/>
+	{:else}
+		<Button base={false} label="Download" />
+	{/if}
 </div>

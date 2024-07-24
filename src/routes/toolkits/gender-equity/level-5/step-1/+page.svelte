@@ -3,7 +3,10 @@
 	import { appState } from '$lib/stores';
 	import { onMount } from 'svelte';
 
+	let online = false;
+
 	onMount(() => {
+		online = window.navigator.onLine;
 		$appState.dialogue = 'Wohoo, you made it here! ✨';
 		$appState.title = '🍿 Step 1 : Story Time !';
 		$appState.leftButtonLink = '/toolkits/gender-equity';
@@ -28,11 +31,13 @@
 		So what can you DO to bring a change around you? In this Scratch game, you will go through many
 		situations that highlight social problems. You will be needed to make decisions in them.
 	</p>
-
-	<Button
-		label="Scratch Game"
-		entryDialogue="Go on and click the button to explore the scratch game or check out what Scratch is."
-		exitDialogue="What are you thinking ?"
-	/>
-	<Button base={false} label="Download" />
+	{#if online}
+		<Button
+			label="Scratch Game"
+			entryDialogue="Go on and click the button to explore the scratch game or check out what Scratch is."
+			exitDialogue="What are you thinking ?"
+		/>
+	{:else}
+		<Button base={false} label="Download" />
+	{/if}
 </div>

@@ -3,7 +3,10 @@
 	import { appState } from '$lib/stores';
 	import { onMount } from 'svelte';
 
+	let online = false;
+
 	onMount(() => {
+		online = window.navigator.onLine;
 		$appState.dialogue = 'Hello learners! ✨';
 		$appState.title = '🍿 Step 1 : Story Time !';
 		$appState.rightButtonLabel = 'Next';
@@ -26,10 +29,13 @@
 	</p>
 
 	<p>Well, play this quick Scratch program to understand this concept well.</p>
-	<Button
-		label="Open"
-		entryDialogue="Go on and click the button to explore the scratch game or check out what Scratch is."
-		exitDialogue="What are you thinking ?"
-	/>
-	<Button base={false} label="Download" />
+	{#if online}
+		<Button
+			label="Open"
+			entryDialogue="Go on and click the button to explore the scratch game or check out what Scratch is."
+			exitDialogue="What are you thinking ?"
+		/>
+	{:else}
+		<Button base={false} label="Download" />
+	{/if}
 </div>

@@ -3,7 +3,10 @@
 	import { appState } from '$lib/stores';
 	import { onMount } from 'svelte';
 
+	let online = false;
+
 	onMount(() => {
+		online = window.navigator.onLine;
 		$appState.dialogue = 'Hi there!';
 		$appState.title = '🍿 Step 1 : Story Time !';
 		$appState.leftButtonLink = '/toolkits/gender-equity';
@@ -21,15 +24,18 @@
 		Please download the scratch story <b>"A Day in Rani's Life"</b> from below and open it in the scratch
 		app.
 	</p>
-	<Button
-		label="Open"
-		entryDialogue="Go on and click the button to explore the scratch project or check out what Scratch is."
-		exitDialogue="What are you waiting for ..."
-	/>
-	<Button
-		base={false}
-		entryDialogue="Go on and click the button to explore the scratch project or check out what Scratch is."
-		exitDialogue="What are you waiting for ..."
-		label="Download"
-	/>
+	{#if online}
+		<Button
+			label="Open"
+			entryDialogue="Go on and click the button to explore the scratch project or check out what Scratch is."
+			exitDialogue="What are you waiting for ..."
+		/>
+	{:else}
+		<Button
+			base={false}
+			entryDialogue="Go on and click the button to explore the scratch project or check out what Scratch is."
+			exitDialogue="What are you waiting for ..."
+			label="Download"
+		/>
+	{/if}
 </div>

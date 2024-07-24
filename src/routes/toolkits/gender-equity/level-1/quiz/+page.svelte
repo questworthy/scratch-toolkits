@@ -2,6 +2,7 @@
 	import { appState } from '$lib/stores';
 	import { onMount } from 'svelte';
 	import Mcq from '$lib/components/MCQ.svelte';
+	import Question from '$lib/components/Question.svelte';
 
 	onMount(() => {
 		$appState.dialogue = 'Can you get the perfect score ?';
@@ -17,21 +18,20 @@
 			options: [
 				{
 					label: 'A belief that men and women should be treated equally.',
-					value: 1,
 					nudge: 'nudge 1'
 				},
 				{
 					label:
 						'A belief that certain roles and behaviors are suitable only for men or only for women.',
-					value: 2,
 					nudge: 'nudge` 2'
 				},
-				{ label: 'A type of music', value: 3, nudge: 'nudge 3' },
-				{ label: 'A law about gender equality', value: 4, nudge: 'nudge 4' }
+				{ label: 'A type of music', nudge: 'nudge 3' },
+				{ label: 'A law about gender equality', nudge: 'nudge 4' }
 			],
-			correct: 2,
-			color: '#DBA979',
-			details: 'You are close. But there is a difference between equality and equity. '
+			answer: 2,
+			detail: 'You are close. But there is a difference between equality and equity. ',
+			correctDialogue: 'Dialogue for correct selection.',
+			incorrectDialogue: 'Dialogue for correct selection.'
 		},
 		{
 			index: 2,
@@ -50,8 +50,10 @@
 				{ label: 'Both boys and girls can become doctors.', value: 3, nudge: 'nudge 3' },
 				{ label: 'Only men should be engineers.', value: 4, nudge: 'nudge 4' }
 			],
-			correct: 3,
-			color: '#DBA979'
+			answer: 3,
+			detail: 'You are close. But there is a difference between equality and equity. ',
+			correctDialogue: 'Dialogue for correct selection.',
+			incorrectDialogue: 'Dialogue for correct selection.'
 		},
 		{
 			index: 3,
@@ -70,14 +72,16 @@
 				{ label: 'Promote only traditional gender roles.', value: 3, nudge: 'nudge 3' },
 				{ label: 'Teach boys and girls different subjects.', value: 4, nudge: 'nudge 4' }
 			],
-			correct: 2,
-			color: '#DBA979'
+			answer: 2,
+			detail: 'You are close. But there is a difference between equality and equity. ',
+			correctDialogue: 'Dialogue for correct selection.',
+			incorrectDialogue: 'Dialogue for correct selection.'
 		}
 	];
 </script>
 
 <div class="mx-auto max-w-screen-md prose font-inter m-4 p-4 prose-xl">
 	{#each questions as question}
-		<Mcq {question} />
+		<Question {question} />
 	{/each}
 </div>

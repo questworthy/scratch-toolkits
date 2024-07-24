@@ -3,7 +3,10 @@
 	import { appState } from '$lib/stores';
 	import { onMount } from 'svelte';
 
+	let online = false;
+
 	onMount(() => {
+		online = window.navigator.onLine;
 		$appState.dialogue = '😎 Welcome to level 2 !';
 		$appState.title = '🍿 Step 1 : Story Time !';
 		$appState.leftButtonLink = '/toolkits/gender-equity';
@@ -23,10 +26,13 @@
 		life. This scratch game will take you through some of these concepts while you navigate your way
 		through some fun yet challenging mazes! 👾
 	</p>
-	<Button
-		label="Open"
-		entryDialogue="Go on and click the button to explore the scratch game or check out what Scratch is."
-		exitDialogue="What are you thinking ?"
-	/>
-	<Button base={false} label="Download" />
+	{#if online}
+		<Button
+			label="Open"
+			entryDialogue="Go on and click the button to explore the scratch game or check out what Scratch is."
+			exitDialogue="What are you thinking ?"
+		/>
+	{:else}
+		<Button base={false} label="Download" />
+	{/if}
 </div>
