@@ -1,7 +1,7 @@
 <script>
 	import { appState } from '$lib/stores';
 	import { onMount } from 'svelte';
-	import Mcq from '$lib/components/MCQ.svelte';
+	import Question from '$lib/components/Question.svelte';
 
 	onMount(() => {
 		$appState.dialogue = 'One last challenge for you!';
@@ -18,32 +18,25 @@
 			options: [
 				{
 					label: 'Ignore it',
-					value: 1,
-					nudge: 'nudge 1',
-					src: ''
+					nudge: 'nudge 1'
 				},
 				{
 					label: 'Tell them to accept it',
-					value: 2,
-					nudge: 'nudge` 2',
-					src: ''
+					nudge: 'nudge` 2'
 				},
 				{
 					label: 'Speak up and support them',
-					value: 3,
-					nudge: 'nudge` 2',
-					src: ''
+					nudge: 'nudge` 2'
 				},
 				{
 					label: 'Agree with the stereotype',
-					value: 4,
-					nudge: 'nudge` 2',
-					src: ''
+					nudge: 'nudge` 2'
 				}
 			],
-			correct: 3,
-			color: '#DBA979',
-			details: ''
+			answer: 3,
+			detail: '',
+			correctDialogue: 'Dialogue for correct selection.',
+			incorrectDialogue: 'Dialogue for correct selection.'
 		},
 		{
 			index: 2,
@@ -51,32 +44,25 @@
 			options: [
 				{
 					label: 'To make sure everyone has the same opportunities',
-					value: 1,
-					nudge: 'nudge 1',
-					src: ''
+					nudge: 'nudge 1'
 				},
 				{
 					label: 'To keep traditional roles the same',
-					value: 2,
-					nudge: 'nudge` 2',
-					src: ''
+					nudge: 'nudge` 2'
 				},
 				{
 					label: 'To create more gender-specific jobs',
-					value: 3,
-					nudge: 'nudge` 3',
-					src: ''
+					nudge: 'nudge` 3'
 				},
 				{
 					label: 'To limit job choices for men and women',
-					value: 4,
-					nudge: 'nudge` 4',
-					src: ''
+					nudge: 'nudge` 4'
 				}
 			],
-			correct: 1,
-			color: '#DBA979',
-			details: ''
+			answer: 1,
+			detail: '',
+			correctDialogue: 'Dialogue for correct selection.',
+			incorrectDialogue: 'Dialogue for correct selection.'
 		},
 		{
 			index: 3,
@@ -84,28 +70,25 @@
 			options: [
 				{
 					label: 'Keep it to yourself',
-					value: 1,
 					nudge: 'nudge 1'
 				},
 				{
 					label: 'Talk to a trusted adult like a parent, teacher, or counselor',
-					value: 2,
 					nudge: 'nudge 2'
 				},
 				{
 					label: 'Ignore your feelings',
-					value: 3,
 					nudge: 'nudge 3'
 				},
 				{
 					label: 'Make fun of others to feel better',
-					value: 4,
 					nudge: 'nudge 4'
 				}
 			],
-			correct: 2,
-			color: '#DBA979',
-			details: ''
+			answer: 2,
+			detail: '',
+			correctDialogue: 'Dialogue for correct selection.',
+			incorrectDialogue: 'Dialogue for correct selection.'
 		}
 	];
 </script>
@@ -113,6 +96,6 @@
 <div class="mx-auto max-w-screen-md prose font-inter m-4 p-4 prose-xl">
 	<p>Let’s play a game called <strong>Who comes to mind?</strong></p>
 	{#each questions as question}
-		<Mcq {question} />
+		<Question {question} />
 	{/each}
 </div>

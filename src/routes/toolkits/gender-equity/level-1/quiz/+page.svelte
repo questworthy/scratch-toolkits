@@ -1,7 +1,6 @@
 <script>
 	import { appState } from '$lib/stores';
 	import { onMount } from 'svelte';
-	import Mcq from '$lib/components/MCQ.svelte';
 	import Question from '$lib/components/Question.svelte';
 
 	onMount(() => {

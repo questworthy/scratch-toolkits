@@ -5,9 +5,8 @@
 		index: 1,
 		label: 'Question ...',
 		options: [
-			{ label: 'Option 1', nudge: 'Nudge 1' },
-			{ label: 'Option 2', nudge: 'Nudge 2' },
-			{ label: 'Option 3', nudge: 'Nudge 3' }
+			{ src: 'Image 1', alt: 'Option 1', nudge: 'Nudge 1' },
+			{ src: 'Image 2', alt: 'Option 2', nudge: 'Nudge 2' }
 		],
 		answer: 2,
 		detail:
@@ -28,7 +27,8 @@
 	</div>
 
 	<p>{question.label}</p>
-	<div class="flex flex-col">
+
+	<div class="grid grid-cols-1 md:grid-cols-2">
 		{#each question.options as option, index}
 			<button
 				disabled={showAnswer}
@@ -39,12 +39,13 @@
 					? 'bg-stone-200'
 					: !showAnswer &&
 						'hover:bg-amber-200'} text-start p-2 border-b border-black transition-all duration-100"
-				>{option.label}</button
 			>
+				<img src={option.src} alt={option.alt} />
+			</button>
 		{/each}
 	</div>
 
-	<div class="h-40 py-4 flex flex-col justify-evenly items-start">
+	<div class="py-4 flex flex-col justify-evenly items-start">
 		{#if !showAnswer}
 			<button
 				class="p-2 m-4 rounded-xl border shadow bg-white active:translate-y-1 active:scale-95 transition-all duration-100"
@@ -57,7 +58,7 @@
 		{:else}
 			<p>
 				Result :
-				{#if question.answer === 0}
+				{#if question.answer === 0 && selected != -1}
 					🎉 Hmm.. Interesting ! {question.detail}
 				{:else if selected === question.answer}
 					✅ Correct.

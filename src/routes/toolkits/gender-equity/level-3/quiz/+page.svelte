@@ -1,7 +1,7 @@
 <script>
 	import { appState } from '$lib/stores';
 	import { onMount } from 'svelte';
-	import Mcq from '$lib/components/MCQ.svelte';
+	import Question from '$lib/components/Question.svelte';
 
 	onMount(() => {
 		$appState.dialogue = 'Time for a quick challenge! 🤩';
@@ -18,21 +18,18 @@
 			options: [
 				{
 					label: 'True.',
-					value: 1,
-					nudge: 'nudge 1',
-					src: ''
+					nudge: 'nudge 1'
 				},
 				{
 					label: 'False',
-					value: 0,
-					nudge: 'nudge` 2',
-					src: ''
+					nudge: 'nudge` 2'
 				}
 			],
-			correct: 0,
-			color: '#DBA979',
-			details:
-				'In India, over 85% of rural women are engaged in agriculture, yet they are not recognised as farmers.'
+			answer: 0,
+			detail:
+				'In India, over 85% of rural women are engaged in agriculture, yet they are not recognised as farmers.',
+			correctDialogue: 'Dialogue for correct selection.',
+			incorrectDialogue: 'Dialogue for correct selection.'
 		},
 		{
 			index: 2,
@@ -40,32 +37,25 @@
 			options: [
 				{
 					label: 'What clothes you wear.',
-					value: 1,
-					nudge: 'nudge 1',
-					src: ''
+					nudge: 'nudge 1'
 				},
 				{
 					label: 'How you feel inside.',
-					value: 2,
-					nudge: 'nudge` 2',
-					src: ''
+					nudge: 'nudge` 2'
 				},
 				{
 					label: 'Where you live.',
-					value: 3,
-					nudge: 'nudge` 2',
-					src: ''
+					nudge: 'nudge` 2'
 				},
 				{
 					label: 'How tall you are ?',
-					value: 4,
-					nudge: 'nudge` 2',
-					src: ''
+					nudge: 'nudge` 2'
 				}
 			],
-			correct: 0,
-			color: '#DBA979',
-			details: 'In India, the ratio of male to female teachers is 57.85% male : 42.15% female.'
+			answer: 0,
+			details: 'In India, the ratio of male to female teachers is 57.85% male : 42.15% female.',
+			correctDialogue: 'Dialogue for correct selection.',
+			incorrectDialogue: 'Dialogue for correct selection.'
 		},
 		{
 			index: 3,
@@ -73,30 +63,27 @@
 			options: [
 				{
 					label: 'It is a numerical concept',
-					value: 1,
 					nudge: 'nudge 1'
 				},
 				{
 					label: 'It is biologically determined',
-					value: 2,
 					nudge: 'nudge` 2'
 				},
 				{
 					label: 'It is the same as the sex of the person',
-					value: 3,
 					nudge: 'nudge` 2'
 				},
 				{
 					label:
 						'It is a social construct (Note: Social construct is an idea that has been created and accepted by the people in a society) ',
-					value: 4,
 					nudge: 'nudge` 2'
 				}
 			],
-			correct: 0,
-			color: '#DBA979',
+			answer: 0,
 			details:
-				'In medical schools, the percentage ratio of female to male doctors is 50.5 female to 49.5 male. However, after medical schools, the number of women working as doctors reduces. The ratio of men to women working as doctors is 64% male : 36% female.'
+				'In medical schools, the percentage ratio of female to male doctors is 50.5 female to 49.5 male. However, after medical schools, the number of women working as doctors reduces. The ratio of men to women working as doctors is 64% male : 36% female.',
+			correctDialogue: 'Dialogue for correct selection.',
+			incorrectDialogue: 'Dialogue for correct selection.'
 		}
 	];
 </script>
@@ -104,6 +91,6 @@
 <div class="mx-auto max-w-screen-md prose font-inter m-4 p-4 prose-xl">
 	<p>Let’s play a game called <strong>Who comes to mind?</strong></p>
 	{#each questions as question}
-		<Mcq {question} />
+		<Question {question} />
 	{/each}
 </div>

@@ -1,7 +1,7 @@
 <script>
 	import { appState } from '$lib/stores';
 	import { onMount } from 'svelte';
-	import Mcq from '$lib/components/MCQ.svelte';
+	import Question from '$lib/components/Question.svelte';
 
 	onMount(() => {
 		$appState.dialogue = 'Ready for the challenge for this level? 🤩';
@@ -17,20 +17,17 @@
 			options: [
 				{
 					label: 'True.',
-					value: 1,
-					nudge: 'nudge 1',
-					src: ''
+					nudge: 'nudge 1'
 				},
 				{
 					label: 'False',
-					value: 2,
-					nudge: 'nudge` 2',
-					src: ''
+					nudge: 'nudge` 2'
 				}
 			],
-			correct: 1,
-			color: '#DBA979',
-			details: ''
+			answer: 1,
+			detail: '',
+			correctDialogue: 'Dialogue for correct selection.',
+			incorrectDialogue: 'Dialogue for correct selection.'
 		},
 		{
 			index: 2,
@@ -39,32 +36,25 @@
 			options: [
 				{
 					label: 'Non-Binary',
-					value: 1,
-					nudge: 'nudge 1',
-					src: ''
+					nudge: 'nudge 1'
 				},
 				{
 					label: 'Transgender',
-					value: 2,
-					nudge: 'nudge` 2',
-					src: ''
+					nudge: 'nudge` 2'
 				},
 				{
 					label: 'Bisexual',
-					value: 3,
-					nudge: 'nudge` 3',
-					src: ''
+					nudge: 'nudge` 3'
 				},
 				{
 					label: 'Asexual',
-					value: 4,
-					nudge: 'nudge` 4',
-					src: ''
+					nudge: 'nudge` 4'
 				}
 			],
-			correct: 2,
-			color: '#DBA979',
-			details: ''
+			answer: 2,
+			detail: '',
+			correctDialogue: 'Dialogue for correct selection.',
+			incorrectDialogue: 'Dialogue for correct selection.'
 		},
 		{
 			index: 3,
@@ -72,28 +62,25 @@
 			options: [
 				{
 					label: 'The subjects someone likes in school',
-					value: 1,
 					nudge: 'nudge 1'
 				},
 				{
 					label: 'The activities someone enjoys',
-					value: 2,
 					nudge: 'nudge 2'
 				},
 				{
 					label: 'Who someone is romantically and physically attracted to',
-					value: 3,
 					nudge: 'nudge 3'
 				},
 				{
 					label: 'The type of food someone prefers',
-					value: 4,
 					nudge: 'nudge 4'
 				}
 			],
-			correct: 3,
-			color: '#DBA979',
-			details: ''
+			answer: 3,
+			detail: '',
+			correctDialogue: 'Dialogue for correct selection.',
+			incorrectDialogue: 'Dialogue for correct selection.'
 		}
 	];
 </script>
@@ -101,6 +88,6 @@
 <div class="mx-auto max-w-screen-md prose font-inter m-4 p-4 prose-xl">
 	<p>Let’s play a game called <strong>Who comes to mind?</strong></p>
 	{#each questions as question}
-		<Mcq {question} />
+		<Question {question} />
 	{/each}
 </div>
