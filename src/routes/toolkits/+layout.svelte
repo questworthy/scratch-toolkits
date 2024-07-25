@@ -7,7 +7,7 @@
 	import { onMount } from 'svelte';
 
 	const NavButtonStyle =
-		'absolute bottom-0 m-4 px-4 py-2 rounded-xl bg-black text-2xl text-white shadow-md hover:bg-sky-200 hover:text-sky-900 transition-colors duration-200';
+		'absolute bottom-0 m-4 md:m-8 p-2 md:p-4 rounded-xl text-2xl font-bold md:text-3xl shadow-md  active:scale-90 active:translate-y-2  transition-all duration-200';
 
 	let width = 0;
 	let height = 0;
@@ -60,12 +60,18 @@
 			<slot />
 		</div>
 		{#if $appState.leftButtonLink != ''}
-			<a class="left-0 {NavButtonStyle}" href={$appState.leftButtonLink}>
+			<a
+				class="left-0 {NavButtonStyle} bg-[#b8cddd] text-[#1d435d]"
+				href={$appState.leftButtonLink}
+			>
 				<button>{$appState.leftButtonLabel}</button>
 			</a>
 		{/if}
 		{#if $appState.rightButtonLink != ''}
-			<a class="right-0 {NavButtonStyle}" href={$appState.rightButtonLink}>
+			<a
+				class="right-0 {NavButtonStyle} bg-[#c5d68c] text-[#1C471F]"
+				href={$appState.rightButtonLink}
+			>
 				<button>{$appState.rightButtonLabel}</button>
 			</a>
 		{/if}

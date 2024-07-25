@@ -49,7 +49,7 @@
 				src={toolkit.src}
 				alt={toolkit.alt}
 			/>
-			<p class="p-2 m-2 font-bold text-center text-2xl text-stone-400">
+			<p class="p-2 m-2 font-bold text-center text-2xl">
 				{toolkit.label}
 			</p>
 		</a>
