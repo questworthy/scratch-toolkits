@@ -7,7 +7,7 @@
 	import { onMount } from 'svelte';
 
 	const NavButtonStyle =
-		'absolute bottom-0 m-4 md:m-8 p-2 md:p-4 rounded-xl text-2xl font-bold md:text-3xl shadow-md  active:scale-90 active:translate-y-2  transition-all duration-200';
+		'absolute bottom-0 m-4 md:m-8 p-4 rounded-xl text-2xl font-bold md:text-3xl shadow-md  active:scale-90 active:translate-y-2  transition-all duration-200';
 
 	let width = 0;
 	let height = 0;
@@ -30,14 +30,16 @@
 			<div class="m-2">
 				<Lily expression={$appState.expression} />
 			</div>
-			<div class="m-2 flex-grow border-b">
+			<div class="m-2 flex-grow border-b text-lg">
 				<p>{$appState.dialogue}</p>
 			</div>
-			<div class="m-2 border-b">
+			<div class="m-2 border-b text-lg">
 				<p>{$appState.resource}</p>
-				<ul class="my-4 list-disc list-inside">
+				<ul class="my-4 list-disc">
 					{#each $appState.links as link}
-						<li><a class="underline-offset-4" target="_blank" href={link.url}>{link.label}</a></li>
+						<li>
+							<a class="no-underline" target="_blank" href={link.url}>{link.label}</a>
+						</li>
 					{/each}
 				</ul>
 			</div>
@@ -52,12 +54,13 @@
 	{/if}
 	<div class="flex-grow flex flex-col relative">
 		<Nav />
-		<div class="pb-40 grow overflow-y-scroll">
-			<h1 class="my-16 text-center font-bold text-4xl text-stone-400">
+		<div class="flex-1 overflow-y-scroll flex flex-col">
+			<h1 class="md:mb-32 py-8 text-center text-[#52225E] bg-[#C3B2E7] shadow">
 				{$appState.title}
 			</h1>
-
-			<slot />
+			<div class="flex-1">
+				<slot />
+			</div>
 		</div>
 		{#if $appState.leftButtonLink != ''}
 			<a
