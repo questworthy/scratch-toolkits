@@ -26,7 +26,7 @@
 
 <div class="w-screen h-screen flex">
 	{#if width >= 1024 && width > height}
-		<div class="w-64 border-r shadow flex flex-col p-2">
+		<div class="w-64 border-r shadow flex flex-col p-2 bg-white">
 			<div class="m-2">
 				<Lily expression={$appState.expression} />
 			</div>
