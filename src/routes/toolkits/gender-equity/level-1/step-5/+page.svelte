@@ -12,6 +12,7 @@
 			hidden = true;
 		}, 1000);
 
+		$appState.pattern = '/patterns/step-5.svg';
 		$appState.dialogue = 'Go ahead and try to build your own Scratch project!';
 		$appState.title = '🎨 Step 5 : Make a Game !';
 		$appState.leftButtonLink = '/toolkits/gender-equity/level-1/step-4';

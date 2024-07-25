@@ -19,5 +19,5 @@ export const appState = writable({
 	leftButtonLink: '',
 	rightButtonLabel: 'Next',
 	rightButtonLink: '',
-	lastLevel: 1
+	pattern: ''
 });

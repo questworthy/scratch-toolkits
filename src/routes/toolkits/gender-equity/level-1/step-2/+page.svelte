@@ -4,6 +4,7 @@
 	import l1s2 from '$lib/assets/l1s2.png';
 
 	onMount(() => {
+		$appState.pattern = '/patterns/step-2.svg';
 		$appState.dialogue =
 			'Do you know what is a stereotype ?  Gender stereotypes can be limiting and harmful. ';
 		$appState.title = '💭 Step 2 : Think !';

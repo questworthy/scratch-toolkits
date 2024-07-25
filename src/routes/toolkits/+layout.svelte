@@ -54,7 +54,10 @@
 	{/if}
 	<div class="flex-grow flex flex-col relative">
 		<Nav />
-		<div class="flex-1 overflow-y-scroll flex flex-col">
+		<div
+			style="background-image: url({$appState.pattern});"
+			class="flex-1 overflow-y-scroll flex flex-col"
+		>
 			<h1 class="md:mb-32 py-8 text-center text-[#52225E] bg-[#C3B2E7] shadow">
 				{$appState.title}
 			</h1>

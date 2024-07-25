@@ -7,6 +7,7 @@
 
 	onMount(() => {
 		online = window.navigator.onLine;
+		$appState.pattern = '/patterns/step-1.svg';
 		$appState.dialogue = 'Hi there!';
 		$appState.title = '🍿 Step 1 : Story Time !';
 		$appState.leftButtonLink = '/toolkits/gender-equity';
@@ -14,7 +15,10 @@
 	});
 </script>
 
-<div class="max-w-screen-sm mx-auto prose-xl">
+<div
+	class="max-w-screen-sm mx-auto prose-xl px-8 py-16 border bg-white shadow rounded-xl font-overpass"
+>
+	<h1 class="text-stone-700">A Day in Rani's Life</h1>
 	<p>Hey learners! 👋</p>
 	<p>
 		Are you excited to take the first step in your journey towards learning about gender, equity,

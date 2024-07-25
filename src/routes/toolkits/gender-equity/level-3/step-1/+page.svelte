@@ -7,6 +7,7 @@
 
 	onMount(() => {
 		online = window.navigator.onLine;
+		$appState.pattern = '/patterns/step-1.svg';
 		$appState.dialogue = 'Hello learners! ✨';
 		$appState.title = '🍿 Step 1 : Story Time !';
 		$appState.rightButtonLabel = 'Next';

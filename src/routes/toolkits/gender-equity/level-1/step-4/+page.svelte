@@ -7,6 +7,7 @@
 	let online = false;
 	onMount(() => {
 		online = window.navigator.onLine;
+		$appState.pattern = '/patterns/step-4.svg';
 		$appState.dialogue = 'Do you know someone around you who has broken a gender stereotype?';
 		$appState.title = '✨ Step 4 : Get Inspired !';
 		$appState.leftButtonLink = '/toolkits/gender-equity/level-1/quiz';

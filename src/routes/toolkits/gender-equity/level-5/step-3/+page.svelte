@@ -4,6 +4,7 @@
 	import { onMount } from 'svelte';
 
 	onMount(() => {
+		$appState.pattern = '/patterns/step-3.svg';
 		$appState.dialogue = 'What are your thoughts on these? 💭';
 		$appState.title = '🚿 Step 3 : Think Again !';
 		$appState.leftButtonLink = '/toolkits/gender-equity/level-5/step-2';

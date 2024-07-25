@@ -4,6 +4,7 @@
 	import Question from '$lib/components/Question.svelte';
 
 	onMount(() => {
+		$appState.pattern = '/patterns/quiz.svg';
 		$appState.dialogue = 'Can you get the perfect score ?';
 		$appState.title = '💡 Quiz Time !';
 		$appState.leftButtonLink = '/toolkits/gender-equity/level-1/step-3';

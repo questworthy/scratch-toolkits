@@ -4,6 +4,9 @@
 	import '@fontsource/comic-neue/400.css'; // regular
 	import '@fontsource/comic-neue/700.css'; // bold
 
+	// Supports weights 100-900
+	import '@fontsource-variable/overpass';
+
 	import Dot from '$lib/components/Dot.svelte';
 
 	import { onMount } from 'svelte';

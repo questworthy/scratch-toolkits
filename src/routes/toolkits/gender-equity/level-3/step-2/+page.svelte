@@ -3,6 +3,7 @@
 	import { onMount } from 'svelte';
 
 	onMount(() => {
+		$appState.pattern = '/patterns/step-2.svg';
 		$appState.dialogue =
 			'Do you understand the concept of gender roles and would you challenge them?';
 		$appState.title = '💭 Step 2 : Think !';
