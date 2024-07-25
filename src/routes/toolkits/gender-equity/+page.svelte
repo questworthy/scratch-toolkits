@@ -31,7 +31,7 @@
 					$appState.expression = 'blank';
 					$appState.dialogue = level;
 				}}
-				class="no-underline cursor-pointer bg-white hover:border-black m-4 p-8 border-4 shadow flex flex-col gap-4 rounded-xl transition-all duration-200 text-center hover:scale-110"
+				class="no-underline cursor-pointer bg-white hover:border-stone-700 m-4 p-8 border-4 border-stone-200 shadow flex flex-col gap-4 rounded-xl transition-all duration-200 text-center hover:scale-110"
 			>
 				<p class="text-6xl m-0">
 					{index + 1}

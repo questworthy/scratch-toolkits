@@ -1,5 +1,6 @@
 <script>
 	import Button from '$lib/components/Button.svelte';
+	import Paper from '$lib/components/Paper.svelte';
 	import { appState } from '$lib/stores';
 	import { onMount } from 'svelte';
 
@@ -16,7 +17,7 @@
 	});
 </script>
 
-<div class="max-w-screen-md mx-auto prose-xl">
+<Paper title="Gender Bread">
 	<p>Hi there! Congratulations on making it to Level 4 of this toolkit. 🎊</p>
 	<p>
 		You explored various stereotypes around males and females, and also learned about the concept of
@@ -59,4 +60,4 @@
 	{:else}
 		<Button base={false} label="Download" />
 	{/if}
-</div>
+</Paper>

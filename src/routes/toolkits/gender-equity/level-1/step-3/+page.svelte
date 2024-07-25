@@ -1,4 +1,5 @@
 <script>
+	import Paper from '$lib/components/Paper.svelte';
 	import PostIt from '$lib/components/PostIt.svelte';
 	import { appState } from '$lib/stores';
 	import { onMount } from 'svelte';
@@ -19,7 +20,7 @@
 	];
 </script>
 
-<div class="max-w-screen-sm mx-auto prose-xl">
+<Paper title={'Share with your Friends'}>
 	<p>
 		The Scratch story about Rani and Aryan in Step 1 talked about so many scenarios. Read the
 		questions and share your opinions with your friends.
@@ -28,4 +29,4 @@
 	{#each posts as post}
 		<PostIt {post} />
 	{/each}
-</div>
+</Paper>

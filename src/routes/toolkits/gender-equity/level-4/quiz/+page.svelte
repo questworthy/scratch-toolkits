@@ -2,6 +2,7 @@
 	import { appState } from '$lib/stores';
 	import { onMount } from 'svelte';
 	import Question from '$lib/components/Question.svelte';
+	import Paper from '$lib/components/Paper.svelte';
 
 	onMount(() => {
 		$appState.pattern = '/patterns/quiz.svg';
@@ -86,9 +87,9 @@
 	];
 </script>
 
-<div class="mx-auto max-w-screen-md prose font-inter m-4 p-4 prose-xl">
+<Paper title="Quiz">
 	<p>Let’s play a game called <strong>Who comes to mind?</strong></p>
 	{#each questions as question}
 		<Question {question} />
 	{/each}
-</div>
+</Paper>

@@ -5,10 +5,12 @@
 	import equalityVideo from '$lib/assets/videos/equality.mp4';
 	import modelsVideo from '$lib/assets/videos/models.mp4';
 	import modelsCaption from '$lib/assets/videos/models.vtt';
+	import Paper from '$lib/components/Paper.svelte';
 
 	let online = false;
 	onMount(() => {
 		online = window.navigator.onLine;
+		$appState.pattern = '/patterns/step-4.svg';
 		$appState.dialogue = 'Video time! 🍿';
 		$appState.title = '✨ Step 4 : Get Inspired !';
 		$appState.leftButtonLink = '/toolkits/gender-equity/level-5/quiz';
@@ -16,7 +18,7 @@
 	});
 </script>
 
-<div class="max-w-screen-sm mx-auto prose-xl">
+<Paper title="Gender Inequity">
 	<p>The video here wraps up all the concepts that you have learnt so far.</p>
 
 	{#if online}
@@ -59,4 +61,4 @@
 			<track label="English" kind="captions" srclang="en" src={modelsCaption} default />
 		</video>
 	{/if}
-</div>
+</Paper>

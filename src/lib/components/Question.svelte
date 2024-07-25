@@ -27,8 +27,8 @@
 		<div class="h-2 w-full bg-[#DBA979]"></div>
 	</div>
 
-	<p>{question.label}</p>
-	<div class="flex flex-col">
+	<p class="font-bold">Q. {question.label}</p>
+	<div class="flex flex-col bg-gray-50 shadow-inner">
 		{#each question.options as option, index}
 			<button
 				disabled={showAnswer}

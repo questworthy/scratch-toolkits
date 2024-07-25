@@ -7,10 +7,12 @@
 
 	import scientistVideo from '$lib/assets/videos/scientist.mp4';
 	import scientistCaption from '$lib/assets/videos/scientist.vtt';
+	import Paper from '$lib/components/Paper.svelte';
 
 	let online = false;
 	onMount(() => {
 		online = window.navigator.onLine;
+		$appState.pattern = '/patterns/step-4.svg';
 		$appState.dialogue = 'Hmmm.. This is quite inspirational! 🫡';
 		$appState.title = '✨ Step 4 : Get Inspired !';
 		$appState.leftButtonLink = '/toolkits/gender-equity/level-3/quiz';
@@ -18,7 +20,7 @@
 	});
 </script>
 
-<div class="max-w-screen-sm mx-auto prose-xl">
+<Paper title="Gender Roles">
 	<p>
 		Parents play a huge role in conditioning the children into or out of the gender roles. Watch
 		this video to learn how!
@@ -66,4 +68,4 @@
 			<track label="English" kind="captions" srclang="en" src={scientistCaption} default />
 		</video>
 	{/if}
-</div>
+</Paper>

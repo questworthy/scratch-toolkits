@@ -1,4 +1,5 @@
 <script>
+	import Paper from '$lib/components/Paper.svelte';
 	import PostIt from '$lib/components/PostIt.svelte';
 	import { appState } from '$lib/stores';
 	import { onMount } from 'svelte';
@@ -17,7 +18,7 @@
 	];
 </script>
 
-<div class="max-w-screen-sm mx-auto prose-xl">
+<Paper title="Appearance != Gender">
 	<p>
 		Think about the following questions and share your thoughts with your friends. Based on the
 		below picture, how would you describe this person’s gender? What was the basis for your
@@ -34,4 +35,4 @@
 	{/each}
 
 	<p>Do you think stereotypes about gender roles affect how people are treated in society?</p>
-</div>
+</Paper>

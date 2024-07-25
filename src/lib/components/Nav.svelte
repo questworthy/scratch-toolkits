@@ -14,7 +14,7 @@
 			Toolkit
 		</p>
 	</a>
-	<nav class="p-2 flex gap-x-2 rounded-full bg-[#e3e1d9] shadow-inner">
+	<nav class="hidden md:flex p-2 gap-x-2 rounded-full bg-[#e3e1d9] shadow-inner">
 		{#each links as link}
 			<a
 				href={link === 'home' ? '/' : '/' + link}

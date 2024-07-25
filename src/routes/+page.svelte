@@ -6,6 +6,7 @@
 
 	onMount(() => {
 		$appState.expression = 'blank';
+		$appState.pattern = '';
 	});
 </script>
 

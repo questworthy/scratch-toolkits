@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { appState } from '$lib/stores';
 	import Button from '$lib/components/Button.svelte';
+	import Paper from '$lib/components/Paper.svelte';
 
 	let online = false;
 	let hidden = false;
@@ -21,7 +22,7 @@
 	});
 </script>
 
-<div class="mx-auto max-w-screen-md prose m-4 p-4 prose-xl">
+<Paper title="Make Something">
 	<p>
 		🍄 You can create your own project or remix any existing projects available on the internet,
 		including the one that you just saw in step 1. So, “Stop not till the goal is reached” Well that
@@ -32,4 +33,4 @@
 
 	<Button label="Create your own scratch project" />
 	<Button base={false} label="Remix the project : A Day in Rani's Life" />
-</div>
+</Paper>

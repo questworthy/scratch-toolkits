@@ -1,5 +1,6 @@
 <script>
 	import Button from '$lib/components/Button.svelte';
+	import Paper from '$lib/components/Paper.svelte';
 	import { appState } from '$lib/stores';
 	import { onMount } from 'svelte';
 
@@ -16,7 +17,7 @@
 	});
 </script>
 
-<div class="max-w-screen-sm mx-auto prose-xl">
+<Paper title="What Can You Do">
 	<p>Welcome to the final level of the gender equity toolkit. 🥁🥁🥁</p>
 	<p>
 		Note: It is recommended that you go through this level after going through the first four
@@ -41,4 +42,4 @@
 	{:else}
 		<Button base={false} label="Download" />
 	{/if}
-</div>
+</Paper>

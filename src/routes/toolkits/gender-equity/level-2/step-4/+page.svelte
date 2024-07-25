@@ -3,10 +3,12 @@
 	import { onMount } from 'svelte';
 	import video from '$lib/assets/videos/padman.mp4';
 	import caption from '$lib/assets/videos/padman.vtt';
+	import Paper from '$lib/components/Paper.svelte';
 
 	let online = false;
 	onMount(() => {
 		online = window.navigator.onLine;
+		$appState.pattern = '/patterns/step-4.svg';
 		$appState.dialogue = 'Do you know someone around you who has broken a gender stereotype?';
 		$appState.title = '✨ Step 4 : Get Inspired !';
 		$appState.leftButtonLink = '/toolkits/gender-equity/level-2/quiz';
@@ -14,7 +16,7 @@
 	});
 </script>
 
-<div class="max-w-screen-sm mx-auto prose-xl">
+<Paper title="Meet Padman">
 	{#if online}
 		<iframe
 			width="560"
@@ -40,4 +42,4 @@
 		much effort and shattering of stereotypes, he made low-cost sanitary napkins for women in rural
 		areas.
 	</p>
-</div>
+</Paper>

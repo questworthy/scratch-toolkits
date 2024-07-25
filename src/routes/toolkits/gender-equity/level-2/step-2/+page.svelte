@@ -1,4 +1,5 @@
 <script>
+	import Paper from '$lib/components/Paper.svelte';
 	import { appState } from '$lib/stores';
 	import { onMount } from 'svelte';
 
@@ -11,7 +12,7 @@
 	});
 </script>
 
-<div class="max-w-screen-sm mx-auto prose-xl">
+<Paper title="Which job is for you?">
 	<p>
 		Think of gender stereotypes at work as invisible rules. They tell us which jobs are “for boys”
 		or “for girls.” But guess what? These rules don’t always fit! Boys can be nurses, and girls can
@@ -30,8 +31,9 @@
 		</li>
 	</ol>
 
-	<p>💭 Did you know ?</p>
-	<div class="flex md:flex-row flex-col gap-4">
+	<div class="h-1 my-10 w-full bg-[#DBA979]"></div>
+	<h2>💭 Did you know ?</h2>
+	<div class="flex flex-col gap-4">
 		<div class="bg-sky-200 border-2 border-sky-400 p-2 rounded-xl">
 			<p class="text-center">
 				The original jeans were designed as durable workwear for labourers, especially miners since
@@ -48,4 +50,4 @@
 			</p>
 		</div>
 	</div>
-</div>
+</Paper>

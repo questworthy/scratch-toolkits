@@ -3,6 +3,7 @@
 	import { onMount } from 'svelte';
 
 	onMount(() => {
+		$appState.pattern = '';
 		$appState.expression = 'blank';
 		$appState.dialogue =
 			"Welcome to Scratch Toolkit. Place your mouse over each image & I'll tell you what it is about.";

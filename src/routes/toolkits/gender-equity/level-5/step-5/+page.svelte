@@ -3,6 +3,7 @@
 	import { appState } from '$lib/stores';
 	import { Confetti } from 'svelte-confetti';
 	import Button from '$lib/components/Button.svelte';
+	import Paper from '$lib/components/Paper.svelte';
 
 	let online = false;
 	let hidden = false;
@@ -13,6 +14,7 @@
 			hidden = true;
 		}, 1000);
 
+		$appState.pattern = '/patterns/step-5.svg';
 		$appState.expression = 'smile';
 		$appState.dialogue = '🎉 Congrats ! You have completed the course !';
 		$appState.title = '🎨 Step 5 : Build your own Scratch project!';
@@ -22,7 +24,7 @@
 	});
 </script>
 
-<div class="mx-auto max-w-screen-md prose m-4 p-4 prose-xl">
+<Paper title="Journey Complete !">
 	<p>
 		Here’s your chance to convert the knowledge of this toolkit into wisdom! 💪 Can you identify one
 		challenge around you pertaining to gender equity? Think of ways to represent it using Scratch
@@ -33,7 +35,7 @@
 
 	<Button label="Create your own scratch project" />
 	<Button base={false} label="Remix the project earlier used in this level" />
-</div>
+</Paper>
 
 <div
 	style="

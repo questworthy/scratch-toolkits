@@ -1,4 +1,5 @@
 <script>
+	import Paper from '$lib/components/Paper.svelte';
 	import PostIt from '$lib/components/PostIt.svelte';
 	import { appState } from '$lib/stores';
 	import { onMount } from 'svelte';
@@ -19,10 +20,10 @@
 	];
 </script>
 
-<div class="max-w-screen-sm mx-auto prose-xl">
+<Paper title="Share you opinions">
 	<p>Read the questions and share your opinions with your friends.</p>
 
 	{#each posts as post}
 		<PostIt {post} />
 	{/each}
-</div>
+</Paper>

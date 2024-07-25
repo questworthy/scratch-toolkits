@@ -2,6 +2,7 @@
 	import Button from '$lib/components/Button.svelte';
 	import { appState } from '$lib/stores';
 	import { onMount } from 'svelte';
+	import Paper from '$lib/components/Paper.svelte';
 
 	let online = false;
 
@@ -16,7 +17,7 @@
 	});
 </script>
 
-<div class="max-w-screen-sm mx-auto prose-xl">
+<Paper title="Gender Stereotypes">
 	<p>
 		Hello and welcome to Level 2 of the Gender Equity Toolkit! In the previous level, you saw that
 		gender stereotypes play a significant role in shaping young minds within schools and households.
@@ -36,4 +37,4 @@
 	{:else}
 		<Button base={false} label="Download" />
 	{/if}
-</div>
+</Paper>

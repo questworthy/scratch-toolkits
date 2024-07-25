@@ -1,4 +1,5 @@
 <script>
+	import Paper from '$lib/components/Paper.svelte';
 	import { appState } from '$lib/stores';
 	import { onMount } from 'svelte';
 
@@ -12,7 +13,7 @@
 	});
 </script>
 
-<div class="max-w-screen-sm mx-auto prose-xl">
+<Paper title="Sex != Gender">
 	<p>
 		The terms sex and gender are often used interchangeably, inaccurately combining two very
 		different concepts. Let us look into their definitions once more:
@@ -35,4 +36,4 @@
 		behave. They also decide what jobs are okay for boys or girls, and how power works in society.
 		These rules are everywhere, like in schools, communities and other systems.
 	</p>
-</div>
+</Paper>

@@ -1,4 +1,5 @@
 <script>
+	import Paper from '$lib/components/Paper.svelte';
 	import { appState } from '$lib/stores';
 	import { onMount } from 'svelte';
 
@@ -11,7 +12,7 @@
 	});
 </script>
 
-<div class="max-w-screen-sm mx-auto prose-xl">
+<Paper title="Identities">
 	<ol>
 		<li>
 			Gender identities- There are multiple gender identities recognised in the world, for ex :
@@ -68,4 +69,4 @@
 			href="https://www.apa.org/ed/precollege/topss/lessons/gender.pdf">here</a
 		>.
 	</p>
-</div>
+</Paper>

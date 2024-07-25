@@ -3,6 +3,7 @@
 	import { onMount } from 'svelte';
 	import video from '$lib/assets/videos/sujatha.mp4';
 	import caption from '$lib/assets/videos/sujatha.vtt';
+	import Paper from '$lib/components/Paper.svelte';
 
 	let online = false;
 	onMount(() => {
@@ -15,7 +16,7 @@
 	});
 </script>
 
-<div class="max-w-screen-sm mx-auto prose-xl">
+<Paper title="Meet Sujatha Ramdori">
 	{#if online}
 		<iframe
 			width="560"
@@ -37,4 +38,4 @@
 		Here is a video about a woman who challenged some stereotypes and rose above them. Meet Ms.
 		Sujata Ramdorai in the video ‘Sujata Ramdorai and her story with numbers!’ 🚀
 	</p>
-</div>
+</Paper>

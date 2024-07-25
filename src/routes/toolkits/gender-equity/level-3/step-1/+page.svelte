@@ -1,5 +1,6 @@
 <script>
 	import Button from '$lib/components/Button.svelte';
+	import Paper from '$lib/components/Paper.svelte';
 	import { appState } from '$lib/stores';
 	import { onMount } from 'svelte';
 
@@ -16,7 +17,7 @@
 	});
 </script>
 
-<div class="max-w-screen-sm mx-auto prose-xl">
+<Paper title="Gender Equity">
 	<p>Hello learners! Welcome back to exploring gender equity concepts with Scratch !</p>
 	<p>
 		In Level 1 and Level 2 of this toolkit, you learned the impact of gender stereotypes at school,
@@ -39,4 +40,4 @@
 	{:else}
 		<Button base={false} label="Download" />
 	{/if}
-</div>
+</Paper>

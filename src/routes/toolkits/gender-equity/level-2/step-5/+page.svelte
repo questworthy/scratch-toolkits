@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { appState } from '$lib/stores';
 	import Button from '$lib/components/Button.svelte';
+	import Paper from '$lib/components/Paper.svelte';
 
 	let online = false;
 	let hidden = false;
@@ -12,6 +13,7 @@
 			hidden = true;
 		}, 1000);
 
+		$appState.pattern = '/patterns/step-5.svg';
 		$appState.dialogue = 'Go ahead and try to build your own Scratch project!';
 		$appState.title = '🎨 Step 5 : Build your own Scratch project!';
 		$appState.leftButtonLink = '/toolkits/gender-equity/level-2/step-4';
@@ -20,7 +22,7 @@
 	});
 </script>
 
-<div class="mx-auto max-w-screen-md prose m-4 p-4 prose-xl">
+<Paper title="Build Something">
 	<p>It is our responsibility to identify these stereotypes and break them :</p>
 	<ol>
 		<li>
@@ -39,4 +41,4 @@
 
 	<Button label="Create your own scratch project" />
 	<Button base={false} label="Remix the project earlier used in this level" />
-</div>
+</Paper>

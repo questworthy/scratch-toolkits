@@ -2,6 +2,7 @@
 	import { appState } from '$lib/stores';
 	import { onMount } from 'svelte';
 	import l1s2 from '$lib/assets/l1s2.png';
+	import Paper from '$lib/components/Paper.svelte';
 
 	onMount(() => {
 		$appState.pattern = '/patterns/step-2.svg';
@@ -13,8 +14,7 @@
 	});
 </script>
 
-<div class="max-w-screen-sm mx-auto prose-xl">
-	<h2>What is a stereotype?</h2>
+<Paper title={'What is a Stereotype ?'}>
 	<p>
 		Do you remember in Rani’s story how confidently the mother said ‘Strong boys don’t cry’ when
 		Aryan was hurt? Or how Priya casually expressed her thought that maybe subjects like Maths and
@@ -37,4 +37,4 @@
 	</p>
 	<p>But, remember ...</p>
 	<p>IT IS IMPORTANT TO EDUCATE OURSELVES ABOUT THESE BELIEFS BECAUSE WE MAKE THE SOCIETY.</p>
-</div>
+</Paper>

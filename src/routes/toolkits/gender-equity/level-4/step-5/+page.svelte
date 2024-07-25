@@ -3,6 +3,7 @@
 	import { appState } from '$lib/stores';
 	import Button from '$lib/components/Button.svelte';
 	import PostIt from '$lib/components/PostIt.svelte';
+	import Paper from '$lib/components/Paper.svelte';
 
 	let online = false;
 	let hidden = false;
@@ -13,6 +14,7 @@
 			hidden = true;
 		}, 1000);
 
+		$appState.pattern = '/patterns/step-5.svg';
 		$appState.dialogue = 'Go ahead and try to build your own Scratch project! 🏗️';
 		$appState.title = '🎨 Step 5 : Build your own Scratch project!';
 		$appState.leftButtonLink = '/toolkits/gender-equity/level-4/step-4';
@@ -27,7 +29,7 @@
 	];
 </script>
 
-<div class="mx-auto max-w-screen-md prose m-4 p-4 prose-xl">
+<Paper title="Hack Something">
 	<p>
 		Everyone’s sexual identity is unique, and it’s important to understand and respect each person’s
 		feelings and experiences. Here are a few key points to remember:
@@ -46,4 +48,4 @@
 
 	<Button label="Create your own scratch project" />
 	<Button base={false} label="Remix the project earlier used in this level" />
-</div>
+</Paper>

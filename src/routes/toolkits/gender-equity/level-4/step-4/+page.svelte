@@ -5,10 +5,12 @@
 	import genderVideo from '$lib/assets/videos/gender.mp4';
 	import genderCaption from '$lib/assets/videos/gender.vtt';
 	import transgenderVideo from '$lib/assets/videos/transgenders.mp4';
+	import Paper from '$lib/components/Paper.svelte';
 
 	let online = false;
 	onMount(() => {
 		online = window.navigator.onLine;
+		$appState.pattern = '/patterns/step-4.svg';
 		$appState.dialogue = 'Video time! 🍿';
 		$appState.title = '✨ Step 4 : Get Inspired !';
 		$appState.leftButtonLink = '/toolkits/gender-equity/level-4/quiz';
@@ -16,7 +18,7 @@
 	});
 </script>
 
-<div class="max-w-screen-sm mx-auto prose-xl">
+<Paper title="Transgenders">
 	<p>Here’s a quick video on gender.</p>
 
 	{#if online}
@@ -58,4 +60,4 @@
 			<source src={transgenderVideo} type="video/mp4" />
 		</video>
 	{/if}
-</div>
+</Paper>

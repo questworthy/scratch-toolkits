@@ -1,4 +1,5 @@
 <script>
+	import Paper from '$lib/components/Paper.svelte';
 	import { appState } from '$lib/stores';
 	import { onMount } from 'svelte';
 
@@ -11,7 +12,7 @@
 	});
 </script>
 
-<div class="max-w-screen-sm mx-auto prose-xl">
+<Paper title="Equity > Equality">
 	<p>What truly is the meaning of <strong>Equity</strong>?</p>
 
 	<p>
@@ -40,4 +41,4 @@
 		This concept applies to almost every sphere of life and not just around gender. Gender equity
 		leads to actual gender equality!
 	</p>
-</div>
+</Paper>

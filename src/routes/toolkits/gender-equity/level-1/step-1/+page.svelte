@@ -1,5 +1,6 @@
 <script>
 	import Button from '$lib/components/Button.svelte';
+	import Paper from '$lib/components/Paper.svelte';
 	import { appState } from '$lib/stores';
 	import { onMount } from 'svelte';
 
@@ -15,10 +16,7 @@
 	});
 </script>
 
-<div
-	class="max-w-screen-sm mx-auto prose-xl px-8 py-16 border bg-white shadow rounded-xl font-overpass"
->
-	<h1 class="text-stone-700">A Day in Rani's Life</h1>
+<Paper title={"A Day in Rani's Life."}>
 	<p>Hey learners! 👋</p>
 	<p>
 		Are you excited to take the first step in your journey towards learning about gender, equity,
@@ -42,4 +40,4 @@
 			label="Download"
 		/>
 	{/if}
-</div>
+</Paper>

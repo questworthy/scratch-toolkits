@@ -5,7 +5,7 @@
 	export let post =
 		'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.';
 
-	let style = 'mx-4 my-8 p-4 shadow-slate-400 shadow-md transition-all duration-200 cursor-pointer';
+	let style = 'mx-4 m-2 p-2 shadow-slate-400 shadow-md transition-all duration-200 cursor-pointer';
 	let rotation = 'rotate-0';
 	let textColor = 'bg-black';
 	let bgColor = 'bg-white';
